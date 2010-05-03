@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 0) do
     t.datetime "last_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
+    t.integer  "main_uid"
   end
 
 end
