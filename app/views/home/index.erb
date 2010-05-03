@@ -1,3 +1,9 @@
-Main page !
+<% if current_user %>
+  <p>Você está logado como <%= current_user.login %> <%= link_to "Sair", user_session_path, :method => :delete %></p>
+<% else %>
+  <p><%= link_to "Login", new_user_session_path %></p>
+<% end %>
 
-<%= link_to "Assinar", new_user_path %>
+Página principal !
+
+<p><%= link_to "Assinar", new_user_path %></p>
