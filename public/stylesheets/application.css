@@ -1,0 +1,136 @@
+/* ================================== */
+/* =            Global              = */
+/* ================================== */
+
+/*.hovering { background-color:red }*/
+
+
+/* Reset */
+body { padding:0; margin:0; font-size:12px; font-family: helvetica, arial, clean, sans-serif; color:#cccccc; background-color:#333333 }
+
+.content { padding:15px; }
+a, a:visited { color: #3787c2; text-decoration:none }
+a:hover { text-decoration:underline }
+
+/* Global classes */
+.smooth { color:#aaaaaa; }
+.medium { color:#777777; }
+.highlight { background-color:#FFFFCC }
+.rounded_2 { -webkit-border-radius:2px; -moz-border-radius:2px; -o-border-radius:2px; border-radius:2px; }
+.rounded_4 { -webkit-border-radius:4px; -moz-border-radius:4px; -o-border-radius:4px; border-radius:4px; }
+.hint { color:#aaaaaa; font-style:italic; font-size:13px; font-family:Cambria, Georgia, Times, 'Times New Roman', serif; }
+.explanation { background-color:#fff5e7; padding:12px; border:solid 1px #faf2e0; color:#777777; font-size:13px;
+               font-style:italic; font-family:Cambria, Georgia, Times, 'Times New Roman', serif; }
+input[type=text].has-hint { color:#999999; text-align:center; font-style:italic; font-family:Cambria, Georgia, Times, 'Times New Roman', serif }
+a.delete-link, a.delete-link:visited { color:#dd2222 }
+
+/* Messages & Errors */
+  .success {  border: 1px solid #9c9; background: #e2f9e3 no-repeat top; color: #060 }
+  .error { border: 1px solid #c68484; background: #fcc no-repeat top; color: #c00; }
+  .warning { border: 1px solid #efefaf; background: #ffffcf no-repeat top; color: #8a8a30; }
+  .info { border: 1px solid #82c2d4; background: #ebf5f8 no-repeat top; color: #229 }
+/*
+  .success {  border: 1px solid #9c9; background: #e2f9e3 url(/images/tick_solid.png) no-repeat top; color: #060 }
+  .error { border: 1px solid #c68484; background: #fcc url(/images/cross_solid.png) no-repeat top; color: #c00; }
+  .warning { border: 1px solid #efefaf; background: #ffffcf url(/images/error_solid.png) no-repeat top; color: #8a8a30; }
+  .info { border: 1px solid #82c2d4; background: #ebf5f8 url(/images/information_solid.png) no-repeat top; color: #229 }
+*/
+/* .notice, .error, .warning, .info { font-weight: bold;	margin: -10px 0 15px 0;	padding: 5px 5px 5px 27px; background-position: 5px 5px } */
+.success, .error, .warning, .info { font-size:13px; text-align:center; padding: 8px 5px 8px 27px; background-position: 25px 9px }
+
+/* box */
+.box, .dark-box, .box_header { padding:20px; }
+.box { background-color:#f2f2f2; border:solid 1px #e3e3e3; }
+.dark-box { background-color:#222222; border:solid 1px #444444;  }
+.box_header { background-color:#e8e8ff; border:solid 1px #d5d5d5; border-bottom:0; height:50px;}
+.box_header big { font-size:16px; }
+
+/* dark-box */
+.box, .box_header { padding:20px; border:solid 1px #e3e3e3; }
+
+/* small box */
+.small-box { padding:6px 8px; background-color:#eeeeee; }
+
+/* override Rails CSS defaults */
+.errorExplanation { background-color:#883333; color:#ffffff; padding:10px; margin:0 -30px 12px -30px}
+.errorExplanation ul li { font-size:12px }
+.fieldWithErrors { display:inline }
+.pretty .fieldWithErrorsors label { color:#990000; font-weight:bold }
+.pretty .fieldWithErrors input[type=text] { background-color:#ffbbbb }
+.pretty .fieldWithErrors input[type=password] { background-color:#ffbbbb }
+
+
+/* ================================== */
+/* =         Pretty Elements        = */
+/* ================================== */
+.pretty { }
+  .pretty li { font-size:14px; padding:6px }
+  .pretty tr { }
+  .pretty tr td .text { font-size:13px; font-weight:bold }
+  .pretty tr td { height:26px; padding:4px 8px 2px 8px; border-bottom:solid 1px #eeeeee }
+  .pretty tr:last-child td { border-bottom:none }
+  .pretty .links { display:none; margin-right:20px; font-size:12px; padding:6px 0 0 10px }
+  .pretty .form { background-color: #eeeeee; }
+  .pretty tr.hovering { background-color:#fff5e7 }
+  .pretty h1 { font-size: 24px; letter-spacing: -0.08em; margin:-10px 0 15px 0; text-align:center  }
+  .pretty h2 { text-align:center }
+  .pretty h3 { text-align:center; font-size:14px; color:#888888; margin:0 0 10px 0 }
+  .pretty p { margin-bottom:12px }
+  .pretty input[type=text], .pretty input[type=password] { font-size:16px; width:250px; padding:2px }
+  .pretty label { color:#777777 }
+  .pretty input[type=submit] { font-size:16px }
+/*  .pretty a { color:#3787c2 }*/
+  .pretty hr { border-color:#ffffff; margin:20px 0 }
+  .pretty big { font-size:15px }
+
+/* ================================== */
+/* =         Awesome buttons        = */
+/* ================================== */
+/* Awesome buttons - http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba */
+.awesome, .awesome:visited {
+	background: #222 url(/images/alert-overlay.png) repeat-x; 
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border:0;
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+
+.awesome:hover { background-color: #111; color: #fff; text-decoration:none }
+.awesome:active	{ top: 1px; }
+.small.awesome, .small.awesome:visited { font-size: 11px; padding: ; }
+.awesome, .awesome:visited, .medium.awesome, .medium.awesome:visited { font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+.large.awesome, .large.awesome:visited { font-size: 14px; padding: 8px 14px 9px; }
+
+.blue.awesome, .blue.awesome:visited		{ background-color: #2daebf; }
+.blue.awesome:hover							        { background-color: #007d9a; }
+.green.awesome, .green.awesome:visited  { background-color: #24c6ac; }
+.green.awesome:hover							      { background-color: #009d6a; }
+
+
+/* ================================== */
+/* =             Login              = */
+/* ================================== */
+.login { background-color:#333333 }
+  .login h1 { color:#24c6ac; text-align:center; padding:70px 0 30px 0}
+  .login-box { background-color:#ffffff; padding:20px 30px; width:260px; margin:auto }
+
+/* ================================== */
+/* =            Banner              = */
+/* ================================== */
+.banner { color:#999999; height:80px; background-color:#000000; padding:10px 20px }
+  .banner h1 { position:absolute; color:#24c6ac; font-size:18px; font-weight:bold; }
+  .banner a, .banner a:visited { color:#ffffff; }
+  .banner .menu-login { float:right; }
+  .banner .menu-app { padding:10px 0; font-size:14px; margin-top:54px }
+    .banner .menu-app a { padding:10px 15px }
+    .banner .menu-app a:hover { background-color:#444444; text-decoration:none  }
+    .banner .menu-app a.selected { background-color:#ffffff; color:#000000 }
