@@ -1,0 +1,20 @@
+AppLog
+======
+
+A very simple plugin that allows you to log in a separate file (log/application.log by default)
+
+
+Install
+=======
+script/plugin install git://github.com/hgtesta/app-log.git
+
+
+Example
+=======
+
+AppLog returns a Logger object.
+
+AppLog.info "Process finished."
+AppLog.warn "User login failed."
+
+Copyright (c) 2010 Henrique G. Testa, released under the MIT license
