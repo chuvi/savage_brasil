@@ -1,9 +1,17 @@
 <% if current_user %>
-  <p>Você está logado como <%= current_user.login %> <%= link_to "Sair", user_session_path, :method => :delete %></p>
+  <div class="dark-box rounded_4 badge" style="">
+    <p><b><%= current_user.login %></b> <%= link_to "Sair", user_session_path, :method => :delete %></p>
+  </div>
 <% else %>
-  <p><%= link_to "Login", new_user_session_path %></p>
+  <div class="dark-box pretty rounded_4 login-box">
+    <% form_for @user_session, :url => "/user_session" do |f| -%>
+      <%= f.error_messages :message => nil, :header_message => nil %>
+      <p> <%= f.label :login, "Usuário" %>  <%= f.text_field :login %> </p>
+      <p> <%= f.label :password, "Senha" %> <%= f.password_field :password %></p>
+      <p style="float:right"><%= f.submit "Entrar", :class => "awesome medium" %></p>
+      <p><%= f.check_box :remember_me %> <%= f.label :remember_me, "Lembrar", :style => "padding-top:2px" %></p>
+    <% end -%>
+  </div>
 <% end %>
 
-Página principal !
-
-<p><%= link_to "Assinar", new_user_path %></p>
+<p><%= link_to "Assinar", new_user_path, :class => "awesome large blue" %></p>

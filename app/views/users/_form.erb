@@ -1,6 +1,6 @@
 <%= f.error_messages :header_message => nil, :message => nil %>
 <p>
-  <%= f.label :name, "Nome <span class='hint'>(opcional)</span>" %><br/>
+  <%= f.label :name, "Nome" %> <span class='hint'>(opcional)</span><br/>
   <%= f.text_field :name %>
 </p>
 
@@ -23,4 +23,10 @@
   <%= f.label :password_confirmation, "Confirme a senha" %><br/>
   <%= f.password_field :password_confirmation %>
 </p>
+
+<p>
+  <%= f.label :main_uid, "UID" %><br/>
+  <%= f.text_field :main_uid %>
+</p>
+
 

@@ -18,7 +18,7 @@ class UserSessionsController < ApplicationController
       redirect_to root_path
     else
       AppLogger.warn "Log in failed for '#{params[:user_session][:login]}'"
-      render :action => :new
+      redirect_to root_path
     end
   end
   

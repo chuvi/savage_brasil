@@ -106,10 +106,10 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 	cursor: pointer;
 }
 
-.awesome:hover { background-color: #111; color: #fff; text-decoration:none }
+.awesome:hover { background-color: #191919; color:#fff; text-decoration:none }
 .awesome:active	{ top: 1px; }
-.small.awesome, .small.awesome:visited { font-size: 11px; padding: ; }
-.awesome, .awesome:visited, .medium.awesome, .medium.awesome:visited { font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+.small.awesome, .small.awesome:visited { font-size: 11px; }
+.awesome, .awesome:visited, .medium.awesome, .medium.awesome:visited { background-color:#303030; font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
 .large.awesome, .large.awesome:visited { font-size: 14px; padding: 8px 14px 9px; }
 
 .blue.awesome, .blue.awesome:visited		{ background-color: #007d9a; } /* cc8844 */
@@ -123,7 +123,9 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* ================================== */
 .login { background-color:#333333 }
   .login h1 { color:#24c6ac; text-align:center; padding:70px 0 30px 0}
-  .login-box { background-color:#ffffff; padding:20px 30px; width:260px; margin:auto }
+  .login-box { width:220px; float:right }
+  .login-box label { float:left; width:50px; padding:8px 5px 0 0; text-align:right }
+  .login-box input[type=text], .login-box input[type=password] { width:150px }
 
 /* ================================== */
 /* =            Banner              = */
@@ -136,3 +138,11 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
     .banner .menu-app a { padding:10px 15px }
     .banner .menu-app a:hover { background-color:#444444; text-decoration:none  }
     .banner .menu-app a.selected { background-color:#ffffff; color:#000000 }
+
+/* ================================== */
+/* =            New User            = */
+/* ================================== */
+.new-user { width:300px; margin:auto }
+
+.badge { float:right; width:200px}
+
