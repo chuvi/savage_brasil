@@ -1,8 +1,13 @@
+<h2>CADASTRO <span style="font-style:italic; font-weight:normal; font-family:Georgia, Times, 'Times New Roman', serif">SavageBrasil</span></h2>
 <div class="pretty dark-box rounded_4" style="width:260px">
   <% form_for @user do |f| %>
 
     <%= render "form", :f => f %>
-    <%= f.submit "Cadastrar" %>
+    <br/>
+    <%= f.submit "Cadastrar", :class => "awesome large blue", :style => "float:right" %>
+    <br/>
+    <br/>
+    <br/>
   
   <% end %>
 </div>

@@ -4,10 +4,11 @@
 
 /*.hovering { background-color:red }*/
 
+/* Abduzeedo azul 00ccff */
 
 /* Reset */
-body { padding:0; margin:0; font-size:12px; font-family: helvetica, arial, clean, sans-serif; color:#cccccc; background-color:#333333 }
-
+body { padding:0; margin:0; font-size:12px; font-family: helvetica, arial, clean, sans-serif; color:#cccccc; background-color:#222222; background: url(/images/body-home.png)  }
+h2 { font-weight:bold; font-size:24px; color:#000000; text-shadow: 0 1px 1px #404040; }
 .content { padding:15px; }
 a, a:visited { color: #3787c2; text-decoration:none }
 a:hover { text-decoration:underline }
@@ -39,11 +40,14 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 .success, .error, .warning, .info { font-size:13px; text-align:center; padding: 8px 5px 8px 27px; background-position: 25px 9px }
 
 /* box */
-.box, .dark-box, .box_header { padding:20px; }
+.box, .box_header { padding:20px; }
 .box { background-color:#f2f2f2; border:solid 1px #e3e3e3; }
-.dark-box { background-color:#222222; border:solid 1px #444444;  }
 .box_header { background-color:#e8e8ff; border:solid 1px #d5d5d5; border-bottom:0; height:50px;}
 .box_header big { font-size:16px; }
+
+/* dark-box */
+.dark-box { padding:20px; background-color:#1b1b1b; border:solid 1px #2e2e2e; }
+.dark-box .hint { color:#555555 }
 
 /* dark-box */
 .box, .box_header { padding:20px; border:solid 1px #e3e3e3; }
@@ -78,8 +82,6 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
   .pretty p { margin-bottom:12px }
   .pretty input[type=text], .pretty input[type=password] { font-size:16px; width:250px; padding:2px }
   .pretty label { color:#777777 }
-  .pretty input[type=submit] { font-size:16px }
-/*  .pretty a { color:#3787c2 }*/
   .pretty hr { border-color:#ffffff; margin:20px 0 }
   .pretty big { font-size:15px }
 
@@ -110,8 +112,8 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 .awesome, .awesome:visited, .medium.awesome, .medium.awesome:visited { font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
 .large.awesome, .large.awesome:visited { font-size: 14px; padding: 8px 14px 9px; }
 
-.blue.awesome, .blue.awesome:visited		{ background-color: #2daebf; }
-.blue.awesome:hover							        { background-color: #007d9a; }
+.blue.awesome, .blue.awesome:visited		{ background-color: #007d9a; } /* cc8844 */
+.blue.awesome:hover							        { background-color: #3787c2; }
 .green.awesome, .green.awesome:visited  { background-color: #24c6ac; }
 .green.awesome:hover							      { background-color: #009d6a; }
 
@@ -126,8 +128,8 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* ================================== */
 /* =            Banner              = */
 /* ================================== */
-.banner { color:#999999; height:80px; background-color:#000000; padding:10px 20px }
-  .banner h1 { position:absolute; color:#24c6ac; font-size:18px; font-weight:bold; }
+.banner { color:#999999; height:160px; background-color:#000000; padding:10px 20px }
+  .banner h1 { position:absolute; color:#ffffff; font-size:18px; font-weight:bold; }
   .banner a, .banner a:visited { color:#ffffff; }
   .banner .menu-login { float:right; }
   .banner .menu-app { padding:10px 0; font-size:14px; margin-top:54px }
