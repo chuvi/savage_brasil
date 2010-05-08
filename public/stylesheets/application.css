@@ -5,13 +5,15 @@
 /*.hovering { background-color:red }*/
 
 /* Abduzeedo azul 00ccff */
+/* greglemond.com amarelo EEC400 */
 
 /* Reset */
 body { padding:0; margin:0; font-size:12px; font-family: helvetica, arial, clean, sans-serif; color:#cccccc; background-color:#222222; background: url(/images/body-home.png)  }
 h2 { font-weight:bold; font-size:24px; color:#000000; text-shadow: 0 1px 1px #404040; }
 .content { padding:15px; }
 a, a:visited { color: #3787c2; text-decoration:none }
-a:hover { text-decoration:underline }
+/*a:hover { text-decoration:underline }*/
+a:hover { color:#eec400 }
 
 /* Global classes */
 .smooth { color:#aaaaaa; }
@@ -132,9 +134,10 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* =           Sidebar              = */
 /* ================================== */
 .sidebar { float:right; width:240px }
+  .sidebar h2 { text-align:center; font-size:18px }
   .sidebar .badge {  }
-  .sidebar textarea { width:100%; height:30px }
-  .sidebar .shout .user { color:#007d9a; font-weight:bold }
+  .sidebar textarea { width:100%; height:60px }
+  .sidebar .shout .user { font-weight:bold }
 
 
 /* ================================== */

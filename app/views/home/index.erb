@@ -17,8 +17,9 @@
   
   <div class="shout">
     <h2>Mural</h2>
+    <%= error_messages_for :shout, :message => nil, :header_message => nil %>
     <% for shout in @shouts %>
-      <p><span class="user"><%= shout.user.login %></span> <%= shout.content %></p>
+      <p><%= link_to shout.user.login, user_path(shout.user), :class => "user" %> <%= shout.content %></p>
     <% end %>
     <% if current_user %>
       <% form_for @shout do |f| %>
@@ -26,7 +27,7 @@
         <p><%= f.submit "Postar", :class => "awesome medium", :style => "float:right" %>
       <% end %>
     <% else %>
-      Você deve se logar para postar no mural
+      <span class="hint">Você deve se logar para postar no mural</span>
     <% end %>
   </div>
 </div>
