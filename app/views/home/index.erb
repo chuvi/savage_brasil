@@ -1,7 +1,11 @@
 <div class="sidebar">
   <% if current_user %>
-    <div class="dark-box rounded_4 badge" style="">
-      <p><b><%= current_user.login %></b> <%= link_to "Sair", user_session_path, :method => :delete %></p>
+    <div class="dark-box rounded_4 badge">
+      <div style="float:right">
+        <%= link_to "configurações", current_user_path %> | 
+        <%= link_to "sair", user_session_path, :method => :delete %>
+      </div>
+      <b><%= current_user.login %></b> 
     </div>
   <% else %>
     <div class="dark-box pretty rounded_4 login-box">
