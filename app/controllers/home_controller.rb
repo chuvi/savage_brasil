@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   
   def index
     @shout = Shout.new
-    @shouts = Shout.all
+    @shouts = Shout.all :limit => 5, :order => "created_at DESC"
     @user_session = UserSession.new
   end
   

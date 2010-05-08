@@ -18,7 +18,7 @@
   <div class="shout">
     <h2>Mural</h2>
     <% for shout in @shouts %>
-      <%= shout.content %>
+      <p><span class="user"><%= shout.user.login %></span> <%= shout.content %></p>
     <% end %>
     <% if current_user %>
       <% form_for @shout do |f| %>
