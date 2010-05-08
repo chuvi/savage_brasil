@@ -30,5 +30,11 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string   "last_login_ip"
     t.integer  "main_uid"
   end
+  
+  create_table "shouts" do |t|
+    t.string   "content"
+    t.datetime "created_at"
+    t.integer  "user_id"
+  end
 
 end

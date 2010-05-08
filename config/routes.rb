@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => :home, :action => :index
   
+  map.resources :shouts
+  
   map.resource :user_session
   map.resources :users
   map.namespace :admin do |admin|
