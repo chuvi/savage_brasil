@@ -16,9 +16,9 @@
         <% end %>
       </h1>
       <div class="menu">
-        <%= link_to "Home", root_path %>
-        <%= link_to "Tutoriais", tutorials_path %>
-        <%= link_to "Jogadores", users_path %>
+        <%= link_to "Home", root_path, :class => @menu == :home ? "selected" : nil %>
+        <%= link_to "Tutoriais", tutorials_path, :class => @menu == :tutorials ? "selected" : nil %>
+        <%= link_to "Jogadores", users_path, :class => @menu == :users ? "selected" : nil %>
       </div>
     </div>
       <div class="content"

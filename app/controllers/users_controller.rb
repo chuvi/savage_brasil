@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   
   skip_before_filter :require_user, :only => [:new, :create]
+  before_filter { |controller| controller.send :menu, :home }
   
   def index
     @users = User.all
@@ -15,7 +16,6 @@ class UsersController < ApplicationController
   end
   
   def create
-    @menu = "users"
     @user = User.new(params[:user])
     if @user.save
       flash[:success] = "#{@user.login}, bem vindo ao Savage Brasil!"
