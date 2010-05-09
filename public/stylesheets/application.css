@@ -26,6 +26,7 @@ a:hover { color:#eec400 }
                font-style:italic; font-family:Cambria, Georgia, Times, 'Times New Roman', serif; }
 input[type=text].has-hint { color:#999999; text-align:center; font-style:italic; font-family:Cambria, Georgia, Times, 'Times New Roman', serif }
 a.delete-link, a.delete-link:visited { color:#dd2222 }
+.with-serif { font-style:italic; font-weight:normal; font-family:Georgia, Times, 'Times New Roman', serif }
 
 /* Messages & Errors */
   .success {  border: 1px solid #9c9; background: #e2f9e3 no-repeat top; color: #060 }
@@ -156,5 +157,8 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* ================================== */
 /* =            New User            = */
 /* ================================== */
-.new-user { width:300px; margin:auto }
-
+.new-user, .edit-user { width:630px; margin:auto }
+.uid-explanation { width:300px; float:right; line-height:1.8em }
+.uid-explanation h3 { text-align:center; color:#EEC400 }
+.uid-explanation p { padding-bottom:15px }
+.uid-explanation strong { color:#ffffff }

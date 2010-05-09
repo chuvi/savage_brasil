@@ -1,32 +1,64 @@
-<%= f.error_messages :header_message => nil, :message => nil %>
-<p>
-  <%= f.label :name, "Nome" %> <span class='hint'>(exibido no site)</span><br/>
-  <%= f.text_field :name %>
-</p>
+<h2><span class='with-serif'>Cadastro</span> <span style="font-weight:normal">SAVAGE</span>BRASIL</h2>
 
-<p>
-  <%= f.label :login, "Usuário" %> <span class='hint'>(utilizado no login)</span><br/>
-  <%= f.text_field :login %>
-</p>
+<div class="uid-explanation" style="display:none">
+  <h3>Sobre o UID</h3>
+  <p><strong>UID é um identificador único</strong> utilizado pelo servidores de Savage para construir <strong>estatísticas dos jogadores</strong>. O site Savage Brasil utiliza o UID para apresentar uma série de informações sobre o jogador automaticamente.</p>
+  
+  <p><strong>Para descobrir o seu UID</strong>, vá à 
+  <%= link_to "página de estatísticas", "http://www.newerth.com/?id=stats" %> do Newerth e digite 
+  seu username. Em seguida, selecione o jogador na lista e observe o endereço do seu navegador. Ele
+  deve conter os caracteres <strong>uid=12345</strong>, onde 12345 é o número do seu UID. Copie este número e
+  cole no campo UID do cadastro do Savage Brasil.</p>
+</div>
 
-<p>
-  <%= f.label :email, "E-mail" %><br/>
-  <%= f.text_field :email %>
-</p>
+<div class="pretty dark-box rounded_4" style="width:260px">
+  <% form_for @user do |f| %>
+    <%= f.error_messages :header_message => nil, :message => nil %>
+    <p>
+      <%= f.label :name, "Nome" %> <span class='hint'>(exibido no site)</span><br/>
+      <%= f.text_field :name %>
+    </p>
 
-<p>
-  <%= f.label :password, "Senha" %><br/>
-  <%= f.password_field :password %>
-</p>
+    <p>
+      <%= f.label :login, "Usuário" %> <span class='hint'>(utilizado no login)</span><br/>
+      <%= f.text_field :login %>
+    </p>
 
-<p>
-  <%= f.label :password_confirmation, "Confirme a senha" %><br/>
-  <%= f.password_field :password_confirmation %>
-</p>
+    <p>
+      <%= f.label :email, "E-mail" %><br/>
+      <%= f.text_field :email %>
+    </p>
 
-<p>
-  <%= f.label :main_uid, "UID" %><br/>
-  <%= f.text_field :main_uid %>
-</p>
+    <p>
+      <%= f.label :password, "Senha" %><br/>
+      <%= f.password_field :password %>
+    </p>
+
+    <p>
+      <%= f.label :password_confirmation, "Confirme a senha" %><br/>
+      <%= f.password_field :password_confirmation %>
+    </p>
+
+    <p>
+      <%= f.label :main_uid, "UID" %> <span class='hint'>(opcional)</span>
+      <%= link_to_function "Que diabos é isso?", :id => "uid-link", :style => "float:right" %><br/>
+      <%= f.text_field :main_uid %>
+    </p>
+    <br/>
+    <%= link_to "← voltar", root_path %>
+    <%= f.submit @user.new_record? ? "Cadastrar" : "Atualizar",
+                         :class => "awesome large blue", :style => "float:right" %>
+    <br/>
+    <br/>
+
+  <% end %>
+</div>
 
 
+<script language="javascript">
+
+  $('#uid-link').click(function(){
+    $('.uid-explanation').toggle();
+  });
+
+</script>

@@ -1,15 +1,4 @@
 <div class="edit-user">
-  <div class="pretty dark-box rounded_4" style="width:260px">
-    <% form_for @user do |f| %>
-
-      <%= render "form", :f => f %>
-      <br/>
-      <%= f.submit "Alterar", :class => "awesome large blue", :style => "float:right" %>
-      <br/>
-      <%= link_to "← voltar", root_path %>
-      <br/>
-      <br/>
-  
-    <% end %>
-  </div>
+  <%= render "form" %>
 </div>
+
