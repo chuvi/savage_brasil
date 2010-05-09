@@ -1,7 +1,25 @@
+<%= link_to "← voltar", back_path_or(root_path) %>
+
 <%= flash[:success] %>
 
-<p><%= @user.name %></p>
-<p><%= @user.login %></p>
-<p><%= @user.email %></p>
+<div class="show-user">
+  <h2><%= @user.name %></h2>
 
-<%= link_to "Retornar à página inicial", root_path %>
+  <% if @user.last_login_at || @user.current_login_at %>
+    <p><span class="hint">Último login em <%= I18n.l @user.last_login_at || @user.current_login_at %></p>
+  <% else %>
+    <p class="hint">Usuário nunca fez login</p>
+  <% end %>
+  
+  
+  <% if @user.main_uid.present? %>
+    <p>
+      UID <%= @user.main_uid %> - 
+    <%= link_to "estatísticas no site da Newerth",
+                   "http://www.newerth.com/?id=stats&action=view&uid=#{@user.main_uid}&pp=&pk=" %></p>
+  <% else %>
+    <p class="hint">Não possui UID</p>
+  <% end %>
+  <p><%= mail_to @user.email %></p>
+
+</div>

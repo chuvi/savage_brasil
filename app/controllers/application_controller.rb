@@ -2,17 +2,17 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   
-  # before_filter :require_user
+  before_filter :store_location
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
-  helper_method :current_user_session, :current_user
+  helper_method :current_user_session, :current_user, :back_path_or
   filter_parameter_logging :password, :password_confirmation
   
 
   private
-  
+    
     def menu(_menu)
       @menu = _menu
     end
@@ -45,9 +45,19 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    def store_location
-      session[:return_to] = request.request_uri
+    # default parameter is necessary because the page can be accessed directly,
+    # for example, through a bookmark
+    def back_path_or(default)
+      session[:back_path] || default
     end
+  
+    def store_location
+      if request.request_method == :get && session[:last] != request.request_uri
+        session[:back_path] = session[:last]
+        session[:last] = request.request_uri
+      end
+    end
+    
 
     def redirect_back_or_default(default)
       redirect_to(session[:return_to] || default)

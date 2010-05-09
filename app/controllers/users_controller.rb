@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_filter { |controller| controller.send :menu, :home }
   
   def index
+    @menu = :users
     @users = User.all
   end
   

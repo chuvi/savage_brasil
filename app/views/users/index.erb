@@ -1,0 +1,7 @@
+<p class="hint">
+  <%= @users.size %> usuários registrados, último usuário: <%= @users.last.name %>
+</p>
+
+<% for user in @users %>
+  <p><b><%= link_to user.name, user_path(user) %></b></p>
+<% end %>
