@@ -145,14 +145,17 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* =            Banner              = */
 /* ================================== */
 .banner { color:#999999; height:160px; background:url(/images/banner.jpg) right no-repeat #000000; padding:10px 20px }
-  .banner h1 { position:absolute; color:#ccccee; font-size:24px; font-weight:normal; text-shadow: 0 1px 3px #404040; }
-  .banner h1 .brasil { font-weight:bold; color:#ffffff }
-  .banner a, .banner a:visited { color:#ffffff; }
+  .banner h1 { position:absolute; font-size:24px;  }
+  .banner h1 a { color:#eec400; font-weight:normal; text-shadow: 0 1px 3px #404040;}
+  .banner h1 a .brasil { font-weight:bold; color:#ffffff }
+
+  /* not used for now */
   .banner .menu-login { float:right; }
-  .banner .menu-app { padding:10px 0; font-size:14px; margin-top:54px }
-    .banner .menu-app a { padding:10px 15px }
-    .banner .menu-app a:hover { background-color:#444444; text-decoration:none  }
-    .banner .menu-app a.selected { background-color:#ffffff; color:#000000 }
+
+  .banner .menu { padding:10px 0; font-size:14px; margin-top:10px; float:right; text-transform:uppercase }
+    .banner .menu a { padding:10px 15px; color:#ffffff; font-weight:bold; text-shadow: 1px 1px 2px #000000;  }
+/*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
+    .banner .menu a.selected { color:#eec400 }
 
 /* ================================== */
 /* =            New User            = */

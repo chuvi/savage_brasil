@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => :home, :action => :index
   
   map.resources :shouts
+  map.tutorials "/tutoriais", :controller => :contents, :action => :tutorials
   map.current_user "/config", :controller => :users, :action => :edit
   map.resource :user_session
   map.resources :users
