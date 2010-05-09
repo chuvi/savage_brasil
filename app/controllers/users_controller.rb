@@ -31,10 +31,10 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     if @user.update_attributes(params[:user])
-      flash[:success] = "User succefully updated"
-      redirect_to admin_users_path
+      flash[:success] = "Conta atualizada com sucesso"
+      redirect_to root_path
     else
       @users = User.all
       render :edit

@@ -1,11 +1,11 @@
 <%= f.error_messages :header_message => nil, :message => nil %>
 <p>
-  <%= f.label :name, "Nome" %> <span class='hint'>(opcional)</span><br/>
+  <%= f.label :name, "Nome" %> <span class='hint'>(exibido no site)</span><br/>
   <%= f.text_field :name %>
 </p>
 
 <p>
-  <%= f.label :login, "Usuário" %><br/>
+  <%= f.label :login, "Usuário" %> <span class='hint'>(utilizado no login)</span><br/>
   <%= f.text_field :login %>
 </p>
 
