@@ -2,11 +2,11 @@
 
 <%= flash[:success] %>
 
-<div class="show-user">
-  <h2><%= @user.name %></h2>
+<h2><%= @user.name %></h2>
+<div class="show-user dark-box">
 
   <% if @user.last_login_at || @user.current_login_at %>
-    <p><span class="hint">Último login em <%= I18n.l @user.last_login_at || @user.current_login_at %></p>
+    <p><span class="hint">Último login foi <%= I18n.l @user.last_login_at || @user.current_login_at %></p>
   <% else %>
     <p class="hint">Usuário nunca fez login</p>
   <% end %>
@@ -20,6 +20,6 @@
   <% else %>
     <p class="hint">Não possui UID</p>
   <% end %>
-  <p><%= mail_to @user.email %></p>
+  <p><span class='hint'>e-mail</span> <%= mail_to @user.email %></p>
 
 </div>

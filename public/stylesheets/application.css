@@ -9,7 +9,8 @@
 
 /* Reset */
 body { padding:0; margin:0; font-size:12px; font-family: helvetica, arial, clean, sans-serif; color:#cccccc; background-color:#222222; background: url(/images/body-home.png)  }
-h2 { font-weight:bold; font-size:24px; color:#000000; text-shadow: 0 1px 1px #404040; }
+h2 { font-weight:bold; font-size:24px; color:#000000; text-shadow: 0 1px 1px #404040; text-align:center }
+h3 { text-align:center; color:#EEC400 }
 .content { padding:15px; }
 a, a:visited { color: #3787c2; text-decoration:none }
 /*a:hover { text-decoration:underline }*/
@@ -27,6 +28,7 @@ a:hover { color:#eec400 }
 input[type=text].has-hint { color:#999999; text-align:center; font-style:italic; font-family:Cambria, Georgia, Times, 'Times New Roman', serif }
 a.delete-link, a.delete-link:visited { color:#dd2222 }
 .with-serif { font-style:italic; font-weight:normal; font-family:Georgia, Times, 'Times New Roman', serif }
+.alternate { color:#EEC400 }
 
 /* Messages & Errors */
   .success {  border: 1px solid #9c9; background: #e2f9e3 no-repeat top; color: #060 }
@@ -134,7 +136,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* ================================== */
 /* =           Sidebar              = */
 /* ================================== */
-.sidebar { float:right; width:240px }
+.sidebar { float:right; width:240px; padding-right:5px }
   .sidebar h2 { text-align:center; font-size:18px }
   .sidebar .badge {  }
   .sidebar textarea { width:100%; height:60px }
@@ -157,11 +159,23 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
     .banner .menu a.selected { color:#eec400 }
 
+
+
 /* ================================== */
-/* =            New User            = */
+/* =              User              = */
 /* ================================== */
 .new-user, .edit-user { width:630px; margin:auto }
 .uid-explanation { width:300px; float:right; line-height:1.8em }
-.uid-explanation h3 { text-align:center; color:#EEC400 }
 .uid-explanation p { padding-bottom:15px }
 .uid-explanation strong { color:#ffffff }
+.show-user { width:300px; margin:auto }
+
+/* ================================== */
+/* =        Static Content          = */
+/* ================================== */
+.tutorials .externals h3 { margin-bottom:25px }
+.tutorials .externals { float:right }
+.tutorials h2 { font-size:18px; margin-bottom:35px }
+
+
+

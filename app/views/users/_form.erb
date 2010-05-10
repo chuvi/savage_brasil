@@ -1,6 +1,6 @@
 <h2><span class='with-serif'>Cadastro</span> <span style="font-weight:normal">SAVAGE</span>BRASIL</h2>
 
-<div class="uid-explanation" style="display:none">
+<div class="uid-explanation">
   <h3>Sobre o UID</h3>
   <p><strong>UID é um identificador único</strong> utilizado pelo servidores de Savage para construir <strong>estatísticas dos jogadores</strong>. O site Savage Brasil utiliza o UID para apresentar uma série de informações sobre o jogador automaticamente.</p>
   
@@ -41,7 +41,7 @@
 
     <p>
       <%= f.label :main_uid, "UID" %> <span class='hint'>(opcional)</span>
-      <%= link_to_function "Que diabos é isso?", :id => "uid-link", :style => "float:right" %><br/>
+      <span class="alternate" style="float:right">Veja ao lado o que é UID →</span><br/>
       <%= f.text_field :main_uid %>
     </p>
     <br/>
@@ -57,6 +57,7 @@
 
 <script language="javascript">
 
+  // not used for now
   $('#uid-link').click(function(){
     $('.uid-explanation').toggle();
   });
