@@ -1,6 +1,4 @@
-conteudo a ser adicionado (não necessariamente nesta área): <br/>
-
-<ul>
+<ul style="display:none">
 	<li>arquivos para download</li>
 	<li>regras</li>
 	<li>como criar clan (tutorial)</li>
@@ -8,103 +6,89 @@ conteudo a ser adicionado (não necessariamente nesta área): <br/>
 	<li>mapas com o resultado dos estudos do husckyio, rufus e mc</li>
 </ul>
 
-
 <div id='tutoriais'>
 	
 	<ul>
-		<li>criacao de clans - noobinho -  http://savagebrasil.forumeiros.com/tutoriais-f16/clan-t488.htm</li>
-		<li>manual basico para comandar beast - ericones - http://savagebrasil.forumeiros.com/tutoriais-f16/manual-basico-comando-beast-passo-a-passo-t33.htm</li>
-		<li>como gravar e assistir demos - hats - http://savagebrasil.forumeiros.com/tutoriais-f16/lista-de-demos-e-instrucoes-de-como-gravar-assistir-t457.htm</li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		
+		<li>
+		  <%= link_to "Criação de clã", "http://savagebrasil.forumeiros.com/tutoriais-f16/clan-t488.htm" %> - noobinho</li>
+	  <li>
+	  <%= link_to "Manual básico para comandar beast", "http://savagebrasil.forumeiros.com/tutoriais-f16/manual-basico-comando-beast-passo-a-passo-t33.htm" %> - ericones</li>
+    <li><%= link_to "Como gravar e assistir demos", "http://savagebrasil.forumeiros.com/tutoriais-f16/lista-de-demos-e-instrucoes-de-como-gravar-assistir-t457.htm" %> - hats</li>
 	<ul>
-	
-	
 </div>
 
 <div id='comandos'>
-	omandos mais úteis, separados por utilidade.
-	Acho que não esqueci de nehum importante, se eu lembrar de algum eu atualizo mais tarde.
-	Serve apenas pra consulta dos jogadores iniciantes mesmo...
+
+  <pre>
+  	COMANDOS SAVAGE
+
+  	1. *GERAL
+  	2. *CALLVOTES
+  	3. *USER COMMANDS
+  	4. *CLAN COMMANDS
+  	5. *OUTROS
 
 
-	COMANDOS SAVAGE
+  	Legenda:
+  	/comando efeito.
 
-	1. *GERAL
-	2. *CALLVOTES
-	3. *USER COMMANDS
-	4. *CLAN COMMANDS
-	5. *OUTROS
+  	===== GERAL=====
+  	/exit desliga o console.
+  	/crash desliga o console.
+  	/bind Cria um bind.
+  	/kill Suicídio.
+  	/reconnect reconecta ao servidor.
+  	/disconnect disconecta do servidor.
+  	/ignore (nome do player) ignora as msg do jogador indicado.
+  	/unignore (nome do player) elimina o efeito do ignore.
+  	/ignoreall ignora todas as mensagens.
+  	/maplist carrega a lista de mapas use números para abrir.
+  	/msg (nome do player) envia uma mensagem privada ao player.
 
-
-
-
-	Legenda:
-	/comando efeito.
-
-
-
-	===== GERAL=====
-	/exit desliga o console.
-	/crash desliga o console.
-	/bind Cria um bind.
-	/kill Suicídio.
-	/reconnect reconecta ao servidor.
-	/disconnect disconecta do servidor.
-	/ignore (nome do player) ignora as msg do jogador indicado.
-	/unignore (nome do player) elimina o efeito do ignore.
-	/ignoreall ignora todas as mensagens.
-	/maplist carrega a lista de mapas use números para abrir.
-	/msg (nome do player) envia uma mensagem privada ao player.
-
-	====== CALLVOTES =====
-	/callvote elect (nome do player) Eleger determinado jogador como Commander.
-	/callvote world (nome do mapa) Mudar para um mapa específico.
-	/callvote nextmap Próximo mapa no rotation.
-	/callvote shuffle Sortear os times aleatóriamente.
-	/callvote restartmatch Reiniciar a partida.
-	/callvote draw Para Definir empate.
-	/callvote concede Para Conceder a Derrota no time.
-	/callvote mute (nome do player) Mutar determinado jogador.
-	/callvote kick (nome do player) Expulsar determinado jogador.
-	/callvote kicknum (numero do player) Expulsar pelo número no console.
+  	====== CALLVOTES =====
+  	/callvote elect (nome do player) Eleger determinado jogador como Commander.
+  	/callvote world (nome do mapa) Mudar para um mapa específico.
+  	/callvote nextmap Próximo mapa no rotation.
+  	/callvote shuffle Sortear os times aleatóriamente.
+  	/callvote restartmatch Reiniciar a partida.
+  	/callvote draw Para Definir empate.
+  	/callvote concede Para Conceder a Derrota no time.
+  	/callvote mute (nome do player) Mutar determinado jogador.
+  	/callvote kick (nome do player) Expulsar determinado jogador.
+  	/callvote kicknum (numero do player) Expulsar pelo número no console.
 
 
 
-	===== USER COMMANDS =====
-	/name (nome) Modifica o nome.
-	/username (username) Modifica o nome de usuário.
-	/password (senha) Modifica a senha da conta atual.
+  	===== USER COMMANDS =====
+  	/name (nome) Modifica o nome.
+  	/username (username) Modifica o nome de usuário.
+  	/password (senha) Modifica a senha da conta atual.
 
 
-	===== CLAN COMMANDS =====
-	/clancommands exibe os comandos de clan.
-	/createclan (iniciais) (Nome completo do Clan) cria um novo clan.
-	/leaveclan sai do clan atual.
-	/invite (nome do player) Convida alguém para participar do clan.
-	/joinclan (iniciais) entra em determinado clan.
-	/clanmembers Lista todos os membros do clan.
-	/newicon (local do arquivo) Adiciona um novo ícone ao clan.
-	/flushclanicon Atualiza ícone ao clan.
-	/kickfromclan (nome do player) expulsar alguém do clan.
-	/userkickfromclan (nome do usuário) expulsar usuário do clan.
-	/makeclanadmin (nome do jogador) transforma o jogador em Admin do clan.
-	/usermakeclanadmin (nome do usuário) tranforma o usuario em admin.
-	/transfersuperadmin (nome do jogador) transfere o status de fouder.
-	/usertransfersuperadmin (nome do usuario) transfere o status de fouder.
+  	===== CLAN COMMANDS =====
+  	/clancommands exibe os comandos de clan.
+  	/createclan (iniciais) (Nome completo do Clan) cria um novo clan.
+  	/leaveclan sai do clan atual.
+  	/invite (nome do player) Convida alguém para participar do clan.
+  	/joinclan (iniciais) entra em determinado clan.
+  	/clanmembers Lista todos os membros do clan.
+  	/newicon (local do arquivo) Adiciona um novo ícone ao clan.
+  	/flushclanicon Atualiza ícone ao clan.
+  	/kickfromclan (nome do player) expulsar alguém do clan.
+  	/userkickfromclan (nome do usuário) expulsar usuário do clan.
+  	/makeclanadmin (nome do jogador) transforma o jogador em Admin do clan.
+  	/usermakeclanadmin (nome do usuário) tranforma o usuario em admin.
+  	/transfersuperadmin (nome do jogador) transfere o status de fouder.
+  	/usertransfersuperadmin (nome do usuario) transfere o status de fouder.
 
 
-
-	===== OUTROS =====
-	/rain Efeito Chuva
-	/snow Efeito Neve
-	/listclients Lista os Jogadores por numero no console.
-	/sensitivity (quantidade de sensibilidade) Aumenta a sensibilidade do mouse.
-	/cl_sensitivity_range (quantidade de sensibilidade) Aumenta a sensibilidade do mouse quando usando uma range weapon.
-	/cl_sensitivity_melee (quantidade de sensibilidade) Aumenta a sensibilidade do mouse quando usando uma melee weapon.
-	/host_maxfps (fps) quantidade máxima de Fps.
+  	===== OUTROS =====
+  	/rain Efeito Chuva
+  	/snow Efeito Neve
+  	/listclients Lista os Jogadores por numero no console.
+  	/sensitivity (quantidade de sensibilidade) Aumenta a sensibilidade do mouse.
+  	/cl_sensitivity_range (quantidade de sensibilidade) Aumenta a sensibilidade do mouse quando usando uma range weapon.
+  	/cl_sensitivity_melee (quantidade de sensibilidade) Aumenta a sensibilidade do mouse quando usando uma melee weapon.
+  	/host_maxfps (fps) quantidade máxima de Fps.
+  </pre>
 </div>
