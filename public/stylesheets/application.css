@@ -164,6 +164,10 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* ================================== */
 /* =              User              = */
 /* ================================== */
+.new-user-session { text-align:center }
+.new-user-session .login-box { margin:auto; text-align:left }
+
+
 .new-user, .edit-user { width:630px; margin:auto }
 .uid-explanation { width:300px; float:right; line-height:1.8em }
 .uid-explanation p { padding-bottom:15px }
