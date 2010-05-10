@@ -1,0 +1,27 @@
+<h2>Galeria</h2>
+
+<div class="sidebar">
+  <div class="dark-box asset-upload">
+    <% if current_user %>
+      <h3>Upload screenshots</h3>
+      <%= flash[:success] %>
+      <% form_for @asset, :html => { :multipart => true } do |f| %>
+        <p><%= f.file_field :image %></p>
+        <p><%= f.text_area :description %></p>
+        <p style="text-align:center"><%= f.submit "Enviar", :class => "awesome blue" %></p>
+      <% end %>
+    <% else %>
+      <div class="hint" style="text-align:center">Você precisa <%= link_to "logar", new_user_session_path %> para efetuar upload de imagens</div>
+    <% end %>
+  </div>
+</div>
+
+<div class="index-assets">
+  <% for asset in @assets %>
+    <span class="image-box">
+      <p><span class='hint'>Postado por </span><%= link_to asset.user.name, user_path(asset.user) %></p>
+      <p><%= link_to image_tag(asset.image.url(:thumb)), asset.image.url, :class => "image-link" %></p>
+      <p><%= asset.description %></p>
+    </span>
+  <% end %>
+</div>

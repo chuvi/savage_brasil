@@ -111,7 +111,6 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 	cursor: pointer;
 }
 
-.awesome:hover { background-color: #191919; color:#fff; text-decoration:none }
 .awesome:active	{ top: 1px; }
 .small.awesome, .small.awesome:visited { font-size: 11px; }
 .awesome, .awesome:visited, .medium.awesome, .medium.awesome:visited { background-color:#303030; font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
@@ -121,6 +120,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 .blue.awesome:hover							        { background-color: #EEC400; }
 .green.awesome, .green.awesome:visited  { background-color: #24c6ac; }
 .green.awesome:hover							      { background-color: #009d6a; }
+.awesome:hover { background-color: #EEC400; color:#fff; text-decoration:none }
 
 
 /* ================================== */
@@ -155,7 +155,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
   .banner .menu-login { float:right; }
 
   .banner .menu { padding:10px 0; font-size:14px; margin-top:10px; float:right; text-transform:uppercase }
-    .banner .menu a { padding:10px 15px; color:#ffffff; font-weight:bold; text-shadow: 1px 1px 2px #000000;  }
+    .banner .menu a { padding:10px 10px; color:#ffffff; font-weight:bold; text-shadow: 1px 1px 2px #000000;  }
 /*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
     .banner .menu a.selected { color:#eec400 }
 
@@ -177,5 +177,10 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 .tutorials .externals { float:right }
 .tutorials h2 { font-size:18px; margin-bottom:35px }
 
-
-
+/* ================================== */
+/* =            Assets              = */
+/* ================================== */
+.asset-upload textarea { height:40px }
+.index-assets .image-box { padding:20px; background-color:#1b1b1b; border:solid 1px #2e2e2e; padding:15px; float:left; width:190px}
+.index-assets a.image-link { padding:2px; float:left }
+.index-assets a.image-link:hover { padding:0; border:solid 2px #EEC400 }
