@@ -191,7 +191,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* ================================== */
 /* =            Assets              = */
 /* ================================== */
-.asset-upload textarea { height:40px }
+.asset-upload textarea { color:#ffffff; height:40px }
 .index-assets .image-box { padding:20px; background-color:#1b1b1b; border:solid 1px #2e2e2e; padding:15px; float:left; width:190px}
 .index-assets a.image-link { padding:2px; float:left }
 .index-assets a.image-link:hover { padding:0; border:solid 2px #EEC400 }
