@@ -15,6 +15,7 @@ h3 { text-align:center; color:#EEC400 }
 a, a:visited { color: #3787c2; text-decoration:none }
 /*a:hover { text-decoration:underline }*/
 a:hover { color:#eec400 }
+img { border:0 }
 
 /* Global classes */
 .smooth { color:#aaaaaa; }
@@ -127,7 +128,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* =             Login              = */
 /* ================================== */
 .login { background-color:#333333 }
-  .login h1 { color:#24c6ac; text-align:center; padding:70px 0 30px 0}
+  .login h1 { color:#24c6ac; text-align:center; padding:70px 0 30px 0 }
   .login-box { width:220px; }
   .login-box label { float:left; width:50px; padding:8px 5px 0 0; text-align:right }
   .login-box input[type=text], .login-box input[type=password] { width:150px }
