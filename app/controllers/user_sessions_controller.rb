@@ -15,7 +15,7 @@ class UserSessionsController < ApplicationController
       flash[:login] = "<div class='success rounded_4'>Login realizado com sucesso!</div><br/>"
       @user = User.find_by_login(@user_session.login)  # can't use current_user here yet
       # AppLogger.info "user '#{@user.login}' succefully logged in"
-      redirect_to root_path
+      redirect_to back_path_or(root_path)
     else
       flash[:login] = "<div class='error rounded_4'>Login ou senha incorretos</div>"
       AppLogger.warn "Log in failed for '#{params[:user_session][:login]}'"
@@ -25,7 +25,7 @@ class UserSessionsController < ApplicationController
   
   def destroy
     current_user_session.destroy
-    flash[:success] = "Logout successful!"
+    flash[:login] = "<div class='success rounded_4'>Você efetuou logout!</div><br/>"
     redirect_to root_path
   end
 end
