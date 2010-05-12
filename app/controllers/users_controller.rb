@@ -19,7 +19,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:success] = "#{@user.login}, bem vindo ao Savage Brasil!"
+      flash[:success] = "<div class='success rounded_4'><big><b>#{@user.name}</b>, bem-vindo ao Savage Brasil!</big></div><br/>
+      "
       redirect_to user_path(@user)
     else
       @users = User.all
