@@ -6,7 +6,7 @@
         <%= link_to "configurações", current_user_path %> | 
         <%= link_to "sair", user_session_path, :method => :delete %>
       </div>
-      <b><%= current_user.login %></b> 
+      <b><%= current_user.name %></b> 
     </div>
   <% else %>
     <%= render "user_sessions/form" %>

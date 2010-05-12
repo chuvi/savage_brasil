@@ -19,8 +19,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:success] = "<div class='success rounded_4'><big><b>#{@user.name}</b>, bem-vindo ao Savage Brasil!</big></div><br/>
-      "
+      flash[:success] = "<div class='success rounded_4'><big><b>#{@user.name}</b>, bem-vindo ao Savage Brasil!</big></div><br/>"
       redirect_to user_path(@user)
     else
       @users = User.all
@@ -35,8 +34,8 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      flash[:success] = "Conta atualizada com sucesso"
-      redirect_to root_path
+      flash[:success] = "<div class='success rounded_4'>Cadastro atualizado com sucesso</div><br/>"
+      redirect_to user_path(@user)
     else
       @users = User.all
       render :edit
