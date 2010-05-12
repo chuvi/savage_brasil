@@ -32,8 +32,8 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 .alternate { color:#EEC400 }
 
 /* Messages & Errors */
-  .success {  border: 1px solid #9c9; background: #e2f9e3 no-repeat top; color: #060 }
-  .error { border: 1px solid #c68484; background: #fcc no-repeat top; color: #c00; }
+  .success { background: #228822 no-repeat top; color: #ffffff }
+  .error { background: #a22 no-repeat top; color: #ffffff; }
   .warning { border: 1px solid #efefaf; background: #ffffcf no-repeat top; color: #8a8a30; }
   .info { border: 1px solid #82c2d4; background: #ebf5f8 no-repeat top; color: #229 }
 /*
@@ -43,7 +43,8 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
   .info { border: 1px solid #82c2d4; background: #ebf5f8 url(/images/information_solid.png) no-repeat top; color: #229 }
 */
 /* .notice, .error, .warning, .info { font-weight: bold;	margin: -10px 0 15px 0;	padding: 5px 5px 5px 27px; background-position: 5px 5px } */
-.success, .error, .warning, .info { font-size:13px; text-align:center; padding: 8px 5px 8px 27px; background-position: 25px 9px }
+/*.success, .error, .warning, .info { font-size:13px; text-align:center; padding: 8px 5px 8px 27px; background-position: 25px 9px }*/
+.success, .error, .warning, .info { font-size:13px; text-align:center; padding:10px }
 
 /* box */
 .box, .box_header { padding:20px; }
@@ -191,8 +192,8 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* ================================== */
 /* =            Assets              = */
 /* ================================== */
-.asset-upload { margin:0 0 20px 20px }
-.asset-upload textarea { color:#ffffff; height:40px }
+.asset-upload { margin:0 0 20px 20px; color:#ffffff; float:right; width:310px }
+.asset-upload textarea { height:40px; background-color:#303030; border:solid 1px #444444; color:#ffffff; padding:5px }
 .index-assets .image-box { padding:20px; background-color:#1b1b1b; border:solid 1px #2e2e2e; padding:15px; float:left; width:190px}
 .index-assets a.image-link { padding:2px; float:left }
 .index-assets a.image-link:hover { padding:0; border:solid 2px #EEC400 }

@@ -10,10 +10,10 @@ class AssetsController < ApplicationController
     @asset = Asset.new(params[:asset])
     @asset.user = current_user
     if @asset.save
-      flash[:success] = "Imagem carregada com sucesso!"
+      flash[:upload] = "<div class='success rounded_4'>Imagem carregada com sucesso!</div>"
       redirect_to assets_path
     else
-      flash[:success] = "Ocorreu um erro ao efetuar o upload!"
+      flash[:upload] = "<div class='error rounded_4'>Ocorreu um erro ao efetuar o upload!</div>"
       redirect_to assets_path
     end
   end
