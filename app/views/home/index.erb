@@ -1,6 +1,7 @@
 <div class="sidebar">
   <% if current_user %>
     <div class="dark-box rounded_4 badge">
+      <%= flash[:login] %>
       <div style="float:right">
         <%= link_to "configurações", current_user_path %> | 
         <%= link_to "sair", user_session_path, :method => :delete %>

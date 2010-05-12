@@ -12,13 +12,14 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      flash[:success] = "Login successful!"
+      flash[:login] = "<div class='success rounded_4'>Login realizado com sucesso!</div><br/>"
       @user = User.find_by_login(@user_session.login)  # can't use current_user here yet
       # AppLogger.info "user '#{@user.login}' succefully logged in"
       redirect_to root_path
     else
+      flash[:login] = "<div class='error rounded_4'>Login ou senha incorretos</div>"
       AppLogger.warn "Log in failed for '#{params[:user_session][:login]}'"
-      redirect_to root_path
+      render :new
     end
   end
   
