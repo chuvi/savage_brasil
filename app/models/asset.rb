@@ -7,5 +7,6 @@ class Asset < ActiveRecord::Base
                     :default_url => "/images/missing_logo.png"
                     
   validates_attachment_presence :image
+  validates_attachment_content_type :image, :content_type => ["image/jpeg", "image/png"]
                     
 end

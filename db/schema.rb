@@ -10,7 +10,22 @@
 # It's strongly recommended to check this file into your version control system.
 
 ActiveRecord::Schema.define(:version => 0) do
-  
+
+  create_table "assets", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "description"
+    t.integer  "user_id"
+  end
+
+  create_table "shouts", :force => true do |t|
+    t.string   "content"
+    t.datetime "created_at"
+    t.integer  "user_id"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "login",                                 :null => false
     t.string   "name"
@@ -29,21 +44,6 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string   "current_login_ip"
     t.string   "last_login_ip"
     t.integer  "main_uid"
-  end
-  
-  create_table "shouts" do |t|
-    t.string   "content"
-    t.datetime "created_at"
-    t.integer  "user_id"
-  end
-  
-  create_table "assets" do |t|
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "description"
-    t.integer  "user_id"
   end
 
 end

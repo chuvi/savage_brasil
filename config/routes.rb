@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.tutorials "/tutoriais", :controller => :contents, :action => :tutorials
   map.current_user "/config", :controller => :users, :action => :edit
   map.resources :assets
+  map.resources :demos
   map.resource :user_session
   map.resources :users
   map.namespace :admin do |admin|

@@ -5,6 +5,7 @@
 /*.hovering { background-color:red }*/
 
 /* Abduzeedo azul 00ccff */
+/* Azul normal 3787c2 */
 /* greglemond.com amarelo EEC400 */
 
 /* Reset */
@@ -195,5 +196,8 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 .asset-upload { margin:0 0 20px 20px; color:#ffffff; float:right; width:310px }
 .asset-upload textarea { height:40px; background-color:#303030; border:solid 1px #444444; color:#ffffff; padding:5px }
 .index-assets .image-box { padding:20px; background-color:#1b1b1b; border:solid 1px #2e2e2e; padding:15px; float:left; width:190px}
+.assets-header h3 { margin:0 0 25px 0 } 
+.assets-header h3 a { font-size:16px; padding:2px 12px; -webkit-border-radius:10px; -moz-border-radius:10px; -o-border-radius:10px; border-radius:10px;   }
+.assets-header h3 a.selected { background-color:#3787c2; color:#222222; text-shadow: 0 1px 1px #aaaacc }
 .index-assets a.image-link { padding:2px; float:left }
 .index-assets a.image-link:hover { padding:0; border:solid 2px #EEC400 }
