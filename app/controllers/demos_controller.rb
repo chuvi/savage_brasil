@@ -1,8 +1,9 @@
 class DemosController < ApplicationController
   
   def index
-    @demo = Demo.new
     @menu = :demos
+    @demo = Demo.new
+    @demos = Demo.all
   end
   
   def create

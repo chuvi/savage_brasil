@@ -1,22 +1,22 @@
-class AssetsController < ApplicationController
+class ImagesController < ApplicationController
   
   def index
     @menu = :images
-    @asset = Asset.new
-    @assets = Asset.all
+    @image = Image.new
+    @images = Image.all
   end
   
   def create
     @menu = :images
-    @asset = Asset.new(params[:asset])
-    @asset.user = current_user
-    if @asset.save
+    @image = Image.new(params[:image])
+    @image.user = current_user
+    if @image.save!
       flash[:upload] = "<div class='success rounded_4'>Imagem carregada com sucesso!</div>"
-      redirect_to assets_path
+      redirect_to images_path
     else
       flash[:upload] = "<div class='error rounded_4'>Ocorreu um erro ao efetuar o upload!</div>"
-      @assets = Asset.all
-      redirect_to assets_path
+      @images = Image.all
+      redirect_to images_path
       # render :index    # TODO
     end
   end

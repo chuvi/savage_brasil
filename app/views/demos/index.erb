@@ -18,4 +18,14 @@
   <% end %>
 </div>
 
-Listagem de demos!
+<table>
+  <% for demo in @demos %>
+    <tr>
+      <td><strong><%= demo.description %></strong></td>
+      <td><%= demo.data_file_size %> kb</td>
+      <td>
+        <%= link_to demo.user.name, user_path(demo.user) %>
+      </td>
+    </tr>
+  <% end %>
+</table>

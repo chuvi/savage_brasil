@@ -1,0 +1,13 @@
+<div class="index-assets">
+
+  <%= render "assets/header" %>
+  <%= render "assets/upload" %>
+
+  <% for image in @images %>
+    <span class="image-box">
+      <p><span class='hint'>Postado por </span><%= link_to image.user.name, user_path(image.user) %></p>
+      <p><%= link_to image_tag(image.image.url(:thumb)), image.image.url, :class => "image-link" %></p>
+      <p><%= image.description %></p>
+    </span>
+  <% end %>
+</div>

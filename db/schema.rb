@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20100512134058) do
     t.datetime "updated_at"
     t.datetime "date"
     t.string   "type"
+    t.string   "title"
   end
 
   create_table "shouts", :force => true do |t|

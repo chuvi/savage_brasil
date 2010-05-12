@@ -8,6 +8,7 @@ class AddDemoFieldsToAssets < ActiveRecord::Migration
     add_column :assets, :updated_at, :datetime
     add_column :assets, :date, :datetime
     add_column :assets, :type, :string
+    add_column :assets, :title, :string
   end
 
   def self.down
@@ -19,5 +20,6 @@ class AddDemoFieldsToAssets < ActiveRecord::Migration
     remove_column :assets, :updated_at
     remove_column :assets, :date
     remove_column :assets, :type
+    remove_column :assets, :title
   end
 end

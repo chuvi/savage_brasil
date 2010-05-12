@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.current_user "/config", :controller => :users, :action => :edit
   map.resources :assets
   map.resources :demos
+  map.resources :images
   map.resource :user_session
   map.resources :users
   map.namespace :admin do |admin|

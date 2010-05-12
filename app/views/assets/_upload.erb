@@ -1,8 +1,8 @@
 <div class="dark-box asset-upload rounded_4">
   <% if current_user %>
-    <h3>Upload de <%= {:images => "imagem", :demos => "demo"}[@menu] %></h3>
+    <h3>Upload de imagem</h3>
     <%= flash[:upload] %>
-    <% form_for @asset, :html => { :multipart => true } do |f| %>
+    <% form_for @image, :html => { :multipart => true } do |f| %>
       <p><%= f.file_field :image, :style => "width:200px" %></p>
       <p>
         <%= f.label :description, "Descrição", :class => "smooth" %><br/>
@@ -11,8 +11,7 @@
     <% end %>
   <% else %>
     <div class="hint" style="text-align:center">
-      Você precisa <%= link_to "logar", new_user_session_path %> para efetuar upload de
-      <%= {:images => "imagens", :demos => "demos"}[@menu] %>
+      Você precisa <%= link_to "logar", new_user_session_path %> para efetuar upload de imagens
     </div>
   <% end %>
 </div>
