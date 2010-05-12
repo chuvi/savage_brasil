@@ -1,31 +1,42 @@
-<%= render "assets/header" %>
+<div class="index-demos">
 
-<div class="dark-box asset-upload rounded_4">
-  <% if current_user %>
-    <h3>Upload de demo</h3>
-    <%= flash[:upload] %>
-    <% form_for @demo, :html => { :multipart => true } do |f| %>
-      <p><%= f.file_field :data, :style => "width:200px" %></p>
-      <p>
-        <%= f.label :description, "Descrição", :class => "smooth" %><br/>
-        <%= f.text_area :description %></p>
-      <p style="text-align:center"><%= f.submit "Enviar", :class => "awesome blue" %></p>
+  <%= render "assets/header" %>
+
+  <div class="dark-box asset-upload rounded_4">
+    <% if current_user %>
+      <h3>Upload de demo</h3>
+      <%= flash[:upload] %>
+      <% form_for @demo, :html => { :multipart => true } do |f| %>
+        <p><%= f.file_field :data %></p>
+        <p>
+          <%= f.label :title, "Título", :class => "smooth" %><br/>
+          <%= f.text_field :title, :style => "width:100%" %>
+        </p>
+        <p>
+          <%= f.label :description, "Descrição", :class => "smooth" %><br/>
+          <%= f.text_area :description %></p>
+        <p style="text-align:center"><%= f.submit "Enviar", :class => "awesome blue" %></p>
+      <% end %>
+    <% else %>
+      <div class="hint" style="text-align:center">
+        Você precisa <%= link_to "logar", new_user_session_path %> para efetuar upload de demos
+      </div>
     <% end %>
-  <% else %>
-    <div class="hint" style="text-align:center">
-      Você precisa <%= link_to "logar", new_user_session_path %> para efetuar upload de demos
-    </div>
-  <% end %>
-</div>
+  </div>
 
-<table>
-  <% for demo in @demos %>
-    <tr>
-      <td><strong><%= demo.description %></strong></td>
-      <td><%= demo.data_file_size %> kb</td>
-      <td>
-        <%= link_to demo.user.name, user_path(demo.user) %>
-      </td>
-    </tr>
-  <% end %>
-</table>
+  <table>
+    <% for demo in @demos %>
+      <tr>
+        <td>
+          <span class='title'><%= link_to demo.title, demo.data.url %></span><br/>
+          <span class='hint'><%= demo.description %></span>
+        </td>
+        <td class='size'><%= demo.data_file_size %> kb</td>
+        <td class='user'>
+          <%= link_to demo.user.name, user_path(demo.user) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+</div>

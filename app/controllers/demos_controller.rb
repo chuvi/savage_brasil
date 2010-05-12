@@ -10,7 +10,7 @@ class DemosController < ApplicationController
     @menu = :demos
     @demo = Demo.new(params[:demo])
     @demo.user = current_user
-    if @demo.save!
+    if @demo.save
       flash[:upload] = "<div class='success rounded_4'>Demo carregado com sucesso!</div>"
       redirect_to demos_path
     else
