@@ -149,7 +149,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* ================================== */
 /* =            Banner              = */
 /* ================================== */
-.banner { color:#999999; height:160px; background:url(/images/banner.jpg) right no-repeat #000000; padding:10px 20px; border-bottom:solid 1px #444444 }
+.banner { color:#999999; height:140px; background:url(/images/banner.jpg) right no-repeat #000000; padding:10px 20px }
   .banner h1 { position:absolute; font-size:24px;  }
   .banner h1 a { color:#eec400; font-weight:normal; text-shadow: 0 1px 3px #404040;}
   .banner h1 a .brasil { font-weight:bold; color:#ffffff }
@@ -161,7 +161,14 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
     .banner .menu a { padding:10px 10px; color:#ffffff; font-weight:bold; text-shadow: 1px 1px 2px #000000;  }
 /*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
     .banner .menu a.selected { color:#eec400 }
+    
+  .bar { background-color:#000000; height:30px; text-align:right; color:#ffffff; border-bottom:solid 1px #444444; border-top:solid 1px #222222; opacity:0.6; filter: alpha(opacity = 50); margin-top:118px}
 
+
+/* ================================== */
+/* =             Shouts             = */
+/* ================================== */
+.index-shouts { margin:auto; width:400px }
 
 
 /* ================================== */

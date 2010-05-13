@@ -1,5 +1,10 @@
 class ShoutsController < ApplicationController
   
+  def index
+    @menu = :home
+    @shouts = Shout.all
+  end
+  
   def create
     @shout = Shout.new(params[:shout])
     @shout.user = current_user

@@ -18,6 +18,7 @@
     <% for shout in @shouts %>
       <p><%= link_to shout.user.name, user_path(shout.user), :class => "user" %> <%= shout.content %></p>
     <% end %>
+    <p style="text-align:center"><%= link_to "Ver posts antigos", shouts_path %></p>
     <% if current_user %>
       <% form_for @shout do |f| %>
         <%= f.text_area :content %><br/>

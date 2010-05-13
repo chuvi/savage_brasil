@@ -1,0 +1,11 @@
+<%= link_to "← voltar", root_path %>
+
+<h2>Mural</h2>
+<div class="dark-box rounded_4 index-shouts">
+  <% for shout in @shouts %>
+    <p>
+      <%= link_to shout.user.name, user_path(shout.user), :class => "user" %>
+      <%= shout.content %>
+    </p>
+  <% end %>
+</div>
