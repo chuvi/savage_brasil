@@ -1,24 +1,12 @@
 <div class="sidebar">
-  <% if current_user %>
-    <div class="dark-box rounded_4 badge">
-      <%= flash[:login] %>
-      <div style="float:right">
-        <%= link_to "configurações", current_user_path %> | 
-        <%= link_to "sair", user_session_path, :method => :delete %>
-      </div>
-      <b><%= current_user.name %></b> 
-    </div>
-  <% else %>
-    <%= render "user_sessions/form" %>
-  <% end %>
-  
-  <div class="shout">
-    <h2>Mural</h2>
+
+  <h2>Mural</h2>
+  <div class="box rounded_4 shout">
     <%= error_messages_for :shout, :message => nil, :header_message => nil %>
     <% for shout in @shouts %>
       <p><%= link_to shout.user.name, user_path(shout.user), :class => "user" %> <%= shout.content %></p>
     <% end %>
-    <p style="text-align:center"><%= link_to "Ver posts antigos", shouts_path %></p>
+    <p style="text-align:center; font-size:11px"><%= link_to "Ver posts antigos", shouts_path %></p>
     <% if current_user %>
       <% form_for @shout do |f| %>
         <%= f.text_area :content %><br/>
@@ -28,6 +16,7 @@
       <div class="hint" style="text-align:center">Você deve logar para postar no mural</div>
     <% end %>
   </div>
+  
 </div>
 
 <div class="post">
