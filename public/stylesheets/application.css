@@ -5,7 +5,8 @@
 /*.hovering { background-color:red }*/
 
 /* Abduzeedo azul 00ccff */
-/* Azul normal 3787c2 */
+/* Azul links 3787c2 */
+/* Azul botões 007d9a */
 /* greglemond.com amarelo EEC400 */
 
 /* Reset */
@@ -199,7 +200,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 .tutorials h2 { font-size:18px; margin-bottom:35px }
 .tutorials h3 { text-align:left; padding:0 0 0 60px; margin-bottom:0 }
 
-.sign-up { background-color:#EEC400; padding:15px; color:#222222; font-weight:bold; text-align:center }
+.sign-up { background-color:#007d9a; padding:15px; color:#222222; font-weight:bold; text-align:center }
   .sign-up h2 { font-size:18px; text-shadow:none; color:#ffffff  }
 
 /* ================================== */
@@ -212,13 +213,14 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 .index-assets .image-box { padding:20px; background-color:#1b1b1b; border:solid 1px #2e2e2e; padding:15px; float:left; width:190px}
 .assets-header h3 { margin:0 0 25px 0 } 
 .assets-header h3 a { font-size:16px; padding:2px 12px; -webkit-border-radius:10px; -moz-border-radius:10px; -o-border-radius:10px; border-radius:10px;   }
-.assets-header h3 a.selected { background-color:#3787c2; color:#222222; text-shadow: 0 1px 1px #aaaacc }
+.assets-header h3 a.selected { color:#ffffff }
 .index-assets a.image-link { padding:2px; float:left }
 .index-assets a.image-link:hover { padding:0; border:solid 2px #EEC400 }
 
-.index-demos table td { vertical-align:top; padding-bottom:20px }
-.index-demos table span.title { font-size:16px; color:#ffffff }
-.index-demos table td.size { white-space:nowrap }
-.index-demos table td.user { white-space:nowrap }
+.index-demos .list { width:600px; background-color:#222222; border-collapse:collapse; float:left }
+.index-demos .list td { vertical-align:top; padding-bottom:20px; border:solid 1px #333333; padding:10px }
+.index-demos .list span.title { font-size:16px; color:#ffffff }
+.index-demos .list td.size { white-space:nowrap }
+.index-demos .list td.user { white-space:nowrap }
 
-
+.new-asset-button { position:absolute; top:260px; right:20px }

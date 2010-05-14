@@ -25,7 +25,7 @@
           </div>
           <b><%= current_user.name %></b>
         <% else %>
-          <%= link_to "LOGIN", new_user_session_path %>
+          <div style="text-align:center"><%= link_to "LOGIN", new_user_session_path %></div>
         <% end %>
       </div>
       <div class="menu">

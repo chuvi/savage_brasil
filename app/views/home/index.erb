@@ -1,9 +1,15 @@
 <div class="sidebar">
+  <%= flash[:login] %>
   
-  <div class="sign-up rounded_4">
-    <h2>Cadastre-se no<br/> <big>Savage Brasil!</big></h2>
-    <p style="text-align:center"><%= link_to "Cadastrar", new_user_path, :class => "awesome large" %></p>
-  </div>
+  
+  <% if current_user.nil? %>
+    <div class="sign-up rounded_4">
+      <h2>Cadastre-se no<br/> <big>Savage Brasil!</big></h2>
+      <p style="text-align:center">
+        <%= link_to "Cadastrar", new_user_path, :id => "new-user-button", :class => "awesome large" %>
+      </p>
+    </div>
+  <% end %>
 
   <h2>Mural</h2>
   <div class="box rounded_4 shout">
@@ -29,7 +35,19 @@
   <h1><span>Bem-vindo ao site</span> Savage Brasil !</h1>
   <p><strong><span class='alternate'>NOVO! </span> Área para upload de <%= link_to "demos", demos_path %> !</strong></p>
   <p>O site Savage Brasil inaugura com a área de <%= link_to "tutoriais", tutorials_path %>, contendo uma lista dos comandos mais utilizados no Savage, além de links de tutoriais para iniciantes, e com a <%= link_to "galeria", assets_path %>. Na galeria é possível fazer upload de screenshots do jogo ou de qualquer outra imagem (usar com moderação :) )</p>
-  <p>Estão planejados vários outros serviços (e tutoriais para iniciantes e jogadores experientes) para o Savage Brasil. <strong>Aproveite e faça o cadastro!</strong> É só clicar no botão abaixo.</p>
-  <br/>
-  <p style="text-align:center"><%= link_to "Assinar", new_user_path, :class => "awesome large blue" %></p></div>
+  <p>Estão planejados vários outros serviços (e tutoriais para iniciantes e jogadores experientes) para o Savage Brasil. <strong>Aproveite e faça o cadastro!</strong></p>
+</div>
 
+<script language="javascript">
+
+  $("#new-user-button").hover(
+    function() {
+      // $(".sign-up").css("background-color", "#007d9a")
+      $(".sign-up").css("background-color", "#000000")
+    },
+    function() {
+      $(".sign-up").css("background-color", "#007d9a")
+    }
+  );
+
+</script>
