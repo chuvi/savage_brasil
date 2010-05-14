@@ -137,7 +137,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /* ================================== */
 /* =           Sidebar              = */
 /* ================================== */
-.sidebar { float:right; width:240px }
+.sidebar { float:right; width:270px }
   .sidebar h2 { text-align:center; font-size:18px }
 
 
@@ -154,7 +154,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
     .banner .menu a.selected { color:#eec400 }
     
-    .bar-background, .bar { position:absolute; right:20px; top:160px; height:30px; width:300px }
+    .bar-background, .bar { position:absolute; right:20px; top:160px; height:30px; width:270px }
 /*  .bar { background-color:#000000; opacity:0.5; filter: alpha(opacity = 50); }*/
   .bar-background {  background-color:#1a1a1a; opacity:0.6; filter: alpha(opacity = 40); z-index:10;
                       -webkit-border-top-left-radius: 15px;
@@ -163,7 +163,7 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
                       -moz-border-radius-topright: 15px;
                       border-top-left-radius: 15px;
                       border-top-right-radius: 15px; }
-  .bar { width:270px; right:35px; color:#dddddd; padding:10px 0px; z-index:11 }
+  .bar { width:240px; right:35px; color:#dddddd; padding:10px 0px; z-index:11 }
   
 
 /* ================================== */
