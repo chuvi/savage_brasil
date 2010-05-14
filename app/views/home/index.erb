@@ -1,4 +1,9 @@
 <div class="sidebar">
+  
+  <div class="sign-up rounded_4">
+    <h2>Cadastre-se no<br/> <big>Savage Brasil!</big></h2>
+    <p style="text-align:center"><%= link_to "Cadastrar", new_user_path, :class => "awesome large" %></p>
+  </div>
 
   <h2>Mural</h2>
   <div class="box rounded_4 shout">
@@ -10,7 +15,8 @@
     <% if current_user %>
       <% form_for @shout do |f| %>
         <%= f.text_area :content %><br/>
-        <p><%= f.submit "Postar", :class => "awesome medium", :style => "float:right" %>
+        <p><%= f.submit "Postar", :class => "awesome medium", :style => "float:right" %></p>
+        <br/>
       <% end %>
     <% else %>
       <div class="hint" style="text-align:center">Você deve logar para postar no mural</div>

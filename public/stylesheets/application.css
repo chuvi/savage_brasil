@@ -153,9 +153,9 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 /*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
     .banner .menu a.selected { color:#eec400 }
     
-    .bar-background, .bar { position:absolute; right:20px; top:159px; height:30px; width:300px }
+    .bar-background, .bar { position:absolute; right:20px; top:160px; height:30px; width:300px }
 /*  .bar { background-color:#000000; opacity:0.5; filter: alpha(opacity = 50); }*/
-  .bar-background {  border:solid 1px #111111; border-bottom:0; background-color:#1a1a1a; opacity:0.6; filter: alpha(opacity = 40); z-index:10;
+  .bar-background {  background-color:#1a1a1a; opacity:0.6; filter: alpha(opacity = 40); z-index:10;
                       -webkit-border-top-left-radius: 15px;
                       -webkit-border-top-right-radius: 15px;
                       -moz-border-radius-topleft: 15px;
@@ -198,6 +198,9 @@ a.delete-link, a.delete-link:visited { color:#dd2222 }
 .tutorials .externals { float:right }
 .tutorials h2 { font-size:18px; margin-bottom:35px }
 .tutorials h3 { text-align:left; padding:0 0 0 60px; margin-bottom:0 }
+
+.sign-up { background-color:#EEC400; padding:15px; color:#222222; font-weight:bold; text-align:center }
+  .sign-up h2 { font-size:18px; text-shadow:none; color:#ffffff  }
 
 /* ================================== */
 /* =            Assets              = */

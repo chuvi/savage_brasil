@@ -3,4 +3,8 @@
 <div class="new-user-session">
   <h2>Login</h2>
   <%= render "user_sessions/form" %>
+  <br/>
+  <p style="text-align:center">
+    Se você não possui cadastro, <%= link_to "cadastre-se aqui", new_user_path %> !
+  </p>
 </div>

@@ -25,9 +25,6 @@
           </div>
           <b><%= current_user.name %></b>
         <% else %>
-        <div style="float:right">
-          <%= link_to "CADASTRAR", new_user_path %>
-        </div>
           <%= link_to "LOGIN", new_user_session_path %>
         <% end %>
       </div>
