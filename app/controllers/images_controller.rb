@@ -10,7 +10,7 @@ class ImagesController < ApplicationController
     @menu = :images
     @image = Image.new(params[:image])
     @image.user = current_user
-    if @image.save!
+    if @image.save
       flash[:upload] = "<div class='success rounded_4'>Imagem carregada com sucesso!</div><br/>"
       redirect_to images_path
     else
