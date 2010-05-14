@@ -2,7 +2,7 @@ class ShoutsController < ApplicationController
   
   def index
     @menu = :home
-    @shouts = Shout.all, :order => "created_at DESC"
+    @shouts = Shout.all :order => "created_at DESC"
   end
   
   def create
