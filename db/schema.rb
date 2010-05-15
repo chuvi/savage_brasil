@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100512134058) do
+ActiveRecord::Schema.define(:version => 20100515010204) do
 
   create_table "assets", :force => true do |t|
     t.string   "image_file_name"
@@ -27,6 +27,26 @@ ActiveRecord::Schema.define(:version => 20100512134058) do
     t.datetime "date"
     t.string   "type"
     t.string   "title"
+  end
+
+  create_table "maps", :force => true do |t|
+    t.string   "name"
+    t.string   "author"
+    t.string   "description"
+    t.string   "dimensions"
+    t.string   "status"
+    t.integer  "teams"
+    t.integer  "flags"
+    t.integer  "gold_mines"
+    t.integer  "red_mines"
+    t.integer  "npcs"
+    t.integer  "chiprels"
+    t.string   "category"
+    t.string   "newerth_link"
+    t.integer  "derived_from_id"
+    t.integer  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "shouts", :force => true do |t|

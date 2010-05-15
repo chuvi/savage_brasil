@@ -4,7 +4,7 @@
 <div class="dark-box rounded_4 index-shouts">
   <% for shout in @shouts %>
     <p>
-      <%= link_to shout.user.name, user_path(shout.user), :class => "user" %>
+      <b><%= link_to shout.user.name, user_path(shout.user) %></b>
       <%= shout.content %>
     </p>
   <% end %>

@@ -16,7 +16,7 @@
           <%= f.label :description, "Descrição", :class => "smooth" %><br/>
           <%= f.text_area :description %>
         </p>
-        <p style="float:left"><%= link_to "Cancelar", :id => "cancel-upload" %></p>
+        <p style="float:left"><%= link_to_function "Cancelar", :id => "cancel-upload" %></p>
         <p style="text-align:right"><%= f.submit "Enviar", :class => "awesome blue" %></p>
       <% end %>
     </div>

@@ -13,9 +13,17 @@
 
   <h2>Mural</h2>
   <div class="box rounded_4 shout">
+    <%= flash[:shout] %>
     <%= error_messages_for :shout, :message => nil, :header_message => nil %>
     <% for shout in @shouts %>
-      <p><%= link_to shout.user.name, user_path(shout.user), :class => "user" %> <%= shout.content %></p>
+      <p>
+        <%= link_to shout.user.name, user_path(shout.user), :class => "user" %> <%= shout.content %>
+        <% if shout.user == current_user %>
+          <small><%= link_to "(excluir)", shout_path(shout), :class => "delete-link", 
+                                                             :method => :delete, 
+                                                             :confirm => "Excluir o post?" %></small>
+        <% end %>
+      </p>
     <% end %>
     <p style="text-align:center; font-size:11px"><%= link_to "Ver posts antigos", shouts_path %></p>
     <% if current_user %>
@@ -38,16 +46,3 @@
   <p>Estão planejados vários outros serviços (e tutoriais para iniciantes e jogadores experientes) para o Savage Brasil. <strong>Aproveite e faça o cadastro!</strong></p>
 </div>
 
-<script language="javascript">
-
-  $("#new-user-button").hover(
-    function() {
-      // $(".sign-up").css("background-color", "#007d9a")
-      $(".sign-up").css("background-color", "#000000")
-    },
-    function() {
-      $(".sign-up").css("background-color", "#007d9a")
-    }
-  );
-
-</script>
