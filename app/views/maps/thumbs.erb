@@ -11,7 +11,7 @@
   <% @maps.each_with_index do |map, i| %>
     <% div_for map do %>
       <div class="name">
-        <span class="with-serif smooth"><%= i + (params[:page].to_i - 1) * 100 + 1%></span>
+        <span class="with-serif smooth"><%= params[:page] ? i + (params[:page].to_i - 1) * 100 + 1 : i + 1%></span>
         <%= map.name %>
       </div>
       <a href='<%= map.image.url(:thumb) %>'><img src='<%# map.thumb_link %><%= map.image.url(:thumb) %>'/></a>
