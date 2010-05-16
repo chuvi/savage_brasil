@@ -20,7 +20,7 @@ end
 desc "Fetch map overhead images from server and store in application"
 task :import_overheads => :environment do
   for map in Map.all
-    system "cd #{Rails.root}/public/map_overheads; curl #{MAPS_URL}/#{map.name}.jpg -O"
+    system "cd #{Rails.root}/public/map_overheads; curl #{MAPS_URL}/#{map.name}_overhead.jpg -O"
     puts "Imported map #{map.name}"
   end
 end
