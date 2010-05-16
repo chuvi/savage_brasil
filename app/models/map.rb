@@ -13,6 +13,7 @@ class Map < ActiveRecord::Base
   @@per_page = 100
   
   has_attached_file :image, :path => ":rails_root/public/system/:class_:attachment/:id_:style.:extension",
+                            :url => "/system/:class_:attachment/:id_:style.:extension",
                             :styles => { :thumb => "100x100>",
                                          :medium => "350x350>" }
   
