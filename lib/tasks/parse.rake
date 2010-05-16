@@ -39,10 +39,10 @@ private
   def fetch_map_names!
     @doc = Hpricot(open(MAPS_URL))    
     maps = (@doc/"td a")
-    maps.delete_if { |map| map.inner_html =~ /.jpg/ }
+    maps.delete_if { |map| map.inner_html !~ /.jpg/ }
     maps_array = []
     for map in maps
-      maps_array << map.inner_html[0..-5]
+      maps_array << map.inner_html[0..-14]
     end
     maps_array.shift # delete . (parent) directory
     maps_array
