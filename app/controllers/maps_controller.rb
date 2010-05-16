@@ -7,7 +7,7 @@ class MapsController < ApplicationController
   
   def thumbs
     @menu = :map_thumbs
-    @maps = Map.all
+    @maps = Map.paginate :page => params[:page]
   end
   
 end

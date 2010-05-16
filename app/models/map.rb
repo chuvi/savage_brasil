@@ -9,6 +9,9 @@ class Map < ActiveRecord::Base
   validates_uniqueness_of :name
   validates_presence_of :name
   
+  cattr_reader :per_page
+  @@per_page = 100
+  
   def overhead_link
     "#{MAPS_URL}#{name}_overhead.jpg"
   end

@@ -74,6 +74,14 @@ h3.submenu { margin:0 0 25px 0 }
 h3.submenu a { font-size:16px; padding:2px 12px; -webkit-border-radius:10px; -moz-border-radius:10px; -o-border-radius:10px; border-radius:10px;   }
 h3.submenu a.selected { color:#ffffff }
 
+/* pagination */
+.pagination { font-size:16px; margin:20px auto 30px auto; text-align:center; }
+.pagination a { padding:10px; background-color:#222222 }
+.pagination .current { font-size:28px; padding:10px; font-weight:bold }
+.pagination .disabled { color:#444444 }
+.pagination .prev_page {  }
+.pagination .next_page {  }
+
 /* ================================== */
 /* =         Pretty Elements        = */
 /* ================================== */
