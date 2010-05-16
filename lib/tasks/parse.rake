@@ -28,7 +28,7 @@ end
 desc "Create image thumbnails for map overheads"
 task :create_map_thumbs => :environment do
   for map in Map.all
-    map.image = File.new("#{Rails.root}/public/map_overheads/#{map.name}.jpg")
+    map.image = File.new("#{Rails.root}/public/map_overheads/#{map.name}_overhead.jpg")
     map.save!
     puts "Created thumb for map #{map.name}"
   end
