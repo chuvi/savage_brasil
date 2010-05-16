@@ -31,7 +31,7 @@
       <div class="menu">
         <%= link_to "Home", root_path, :class => @menu == :home ? "selected" : nil %>
         <%= link_to "Galeria", images_path, :class => (@menu == :images || @menu == :demos ) ? "selected" : nil %>
-        <%# link_to "Mapas", maps_path, :class => @menu == :maps ? "selected" : nil %>
+        <%= link_to "Mapas", maps_path, :class => @menu == :maps ? "selected" : nil %>
         <%= link_to "Tutoriais", tutorials_path, :class => @menu == :tutorials ? "selected" : nil %>
         <%= link_to "Jogadores", users_path, :class => @menu == :users ? "selected" : nil %>
       </div>

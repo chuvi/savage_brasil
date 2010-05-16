@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.current_user "/config", :controller => :users, :action => :edit
   map.resources :assets
   map.resources :demos
-  map.resources :maps
+  map.resources :maps, :collection => { :thumbs => :get }
   map.resources :images
   map.resource :user_session
   map.resources :users

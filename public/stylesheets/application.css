@@ -70,6 +70,9 @@ a.delete-link:hover { color:#eec400 }
 .pretty .fieldWithErrors input[type=text] { background-color:#ffbbbb }
 .pretty .fieldWithErrors input[type=password] { background-color:#ffbbbb }
 
+h3.submenu { margin:0 0 25px 0 } 
+h3.submenu a { font-size:16px; padding:2px 12px; -webkit-border-radius:10px; -moz-border-radius:10px; -o-border-radius:10px; border-radius:10px;   }
+h3.submenu a.selected { color:#ffffff }
 
 /* ================================== */
 /* =         Pretty Elements        = */
@@ -176,6 +179,13 @@ a.delete-link:hover { color:#eec400 }
 
 
 /* ================================== */
+/* =              Maps              = */
+/* ================================== */
+.map { background-color:#333333; float:left; margin:5px; padding:10px}
+.map .name { text-align:center; padding-bottom:3px }
+
+
+/* ================================== */
 /* =              User              = */
 /* ================================== */
 .new-user-session { text-align:center }
@@ -212,9 +222,6 @@ a.delete-link:hover { color:#eec400 }
 .asset-upload textarea { height:40px; padding:3px; overflow:auto; width:100% }
 
 .index-assets .image-box { padding:20px; background-color:#1b1b1b; border:solid 1px #2e2e2e; padding:15px; float:left; width:190px}
-.assets-header h3 { margin:0 0 25px 0 } 
-.assets-header h3 a { font-size:16px; padding:2px 12px; -webkit-border-radius:10px; -moz-border-radius:10px; -o-border-radius:10px; border-radius:10px;   }
-.assets-header h3 a.selected { color:#ffffff }
 .index-assets a.image-link { padding:2px; float:left }
 .index-assets a.image-link:hover { padding:0; border:solid 2px #EEC400 }
 

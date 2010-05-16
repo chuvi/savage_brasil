@@ -1,0 +1,13 @@
+<h2>Mapas</h2>
+
+<h3 class="submenu">
+  <%= link_to "Listagem", maps_path, :class => @menu == :map_list ? "selected" : nil %>
+  <%= link_to "Miniaturas", maps_path, :class => @menu == :map_thumbs ? "selected" : nil %>
+</h3>
+
+<% for map in @maps %>
+  <% div_for map do %>
+    <div class="name"><%= map.name %></div>
+    <a href='<%= map.overhead_link %>'><img src='<%= map.thumb_link %>'/></a>
+  <% end %>
+<% end %>

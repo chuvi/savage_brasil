@@ -1,2 +1,15 @@
-<h3>Mapas</h3>
+<h2>Mapas</h2>
 
+<h3 class="submenu">
+  <%= link_to "Listagem", maps_path, :class => @menu == :map_list ? "selected" : nil %>
+  <%= link_to "Miniaturas", thumbs_maps_path, :class => @menu == :map_thumbs ? "selected" : nil %>
+</h3>
+
+<p><b><%= @maps.size %></b> mapas no servidor Terra</p>
+<table>
+  <% for map in @maps %>
+    <tr>
+      <td><%= link_to map.name, map.overhead_link %></td>
+    </tr>
+  <% end %>
+</table>
