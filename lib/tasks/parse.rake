@@ -5,7 +5,7 @@ MAPS_URL = "http://napalm.com.br/savage/maps/"
 
 desc "List maps from map server"
 task :maps do
-  fetch_map_names!
+  puts fetch_map_names!.inspect
 end
 
 desc "Fetch maps from map server and import into the database"
