@@ -1,7 +1,7 @@
 require "hpricot"
 require "open-uri"
 
-MAPS_URL = "http://napalm.com.br/savage/maps/"
+MAPS_URL = "http://napalm.com.br/savage/maps"
 
 desc "List maps from map server"
 task :maps do
