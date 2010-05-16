@@ -5,16 +5,19 @@
   <%= link_to "Miniaturas", maps_path, :class => @menu == :map_thumbs ? "selected" : nil %>
 </h3>
 
-<%= will_paginate @maps, :previous_label => "Anterior", :next_label => "Próximo", :separator => "" %>
+<%= will_paginate @maps, :previous_label => " &nbsp; ← ", :next_label => " → &nbsp; ", :separator => "" %>
 
 <div style="display:inline-block">
-  <% for map in @maps %>
+  <% @maps.each_with_index do |map, i| %>
     <% div_for map do %>
-      <div class="name"><%= map.name %></div>
-      <a href='<%= map.overhead_link %>'><img src='<%= map.thumb_link %>'/></a>
+      <div class="name">
+        <span class="with-serif smooth"><%= i + (params[:page].to_i - 1) * 100 + 1%></span>
+        <%= map.name %>
+      </div>
+      <a href='<%= map.image.url(:thumb) %>'><img src='<%# map.thumb_link %><%= map.image.url(:thumb) %>'/></a>
     <% end %>
   <% end %>
 </div>
 
-<%= will_paginate @maps, :previous_label => "< Anterior", :next_label => "Próximo >", :separator => "" %>
+<%= will_paginate @maps, :previous_label => " &nbsp; ← ", :next_label => " → &nbsp; ", :separator => "" %>
 

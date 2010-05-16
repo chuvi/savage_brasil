@@ -17,6 +17,23 @@ task :import_maps => :environment do
   puts "#{map_names.size} maps imported."
 end
 
+desc "Fetch map overhead images from server and store in application"
+task :import_overheads => :environment do
+  for map in Map.all
+    system "cd #{Rails.root}/public/map_overheads; curl #{MAPS_URL}/#{map.name}.jpg -O"
+    puts "Imported map #{map.name}"
+  end
+end
+
+desc "Create image thumbnails for map overheads"
+task :create_map_thumbs => :environment do
+  for map in Map.all
+    map.image = File.new("#{Rails.root}/public/map_overheads/#{map.name}.jpg")
+    map.save!
+    puts "Created thumb for map #{map.name}"
+  end
+end
+
 private
 
   def fetch_map_names!
@@ -27,7 +44,11 @@ private
     for map in maps
       maps_array << map.inner_html[0..-5]
     end
+    maps_array.shift # delete . (parent) directory
     maps_array
+  end
+  
+  def create_map_thumbnails!
   end
   
   

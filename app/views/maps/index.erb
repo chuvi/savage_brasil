@@ -7,9 +7,9 @@
 
 <p><b><%= @maps.size %></b> mapas no servidor Terra</p>
 <table>
-  <% for map in @maps %>
+  <% @maps.each_with_index do |map, i| %>
     <tr>
-      <td><%= link_to map.name, map.overhead_link %></td>
+      <td><span class="with-serif smooth"><%= i + 1 %></span> <%= link_to map.name, map.overhead_link %></td>
     </tr>
   <% end %>
 </table>

@@ -20,7 +20,7 @@ a:hover { color:#eec400 }
 img { border:0 }
 
 /* Global classes */
-.smooth { color:#aaaaaa; }
+.smooth { color:#555555; }
 .medium { color:#777777; }
 .highlight { background-color:#FFFFCC }
 .rounded_2 { -webkit-border-radius:2px; -moz-border-radius:2px; -o-border-radius:2px; border-radius:2px; }
@@ -77,10 +77,24 @@ h3.submenu a.selected { color:#ffffff }
 /* pagination */
 .pagination { font-size:16px; margin:20px auto 30px auto; text-align:center; }
 .pagination a { padding:10px; background-color:#222222 }
-.pagination .current { font-size:28px; padding:10px; font-weight:bold }
+.pagination .current { color:#ffffff; font-size:28px; padding:10px; font-weight:bold }
 .pagination .disabled { color:#444444 }
-.pagination .prev_page {  }
-.pagination .next_page {  }
+.pagination .prev_page { font-weight:bold; 
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;  }
+.pagination .next_page { font-weight:bold;
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-bottomright: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;  }
+  
+    }
 
 /* ================================== */
 /* =         Pretty Elements        = */
@@ -190,7 +204,7 @@ h3.submenu a.selected { color:#ffffff }
 /* =              Maps              = */
 /* ================================== */
 .map { background-color:#333333; float:left; margin:5px; padding:10px}
-.map .name { text-align:center; padding-bottom:3px }
+.map .name { text-align:center; padding-bottom:3px; font-size:12px }
 
 
 /* ================================== */
