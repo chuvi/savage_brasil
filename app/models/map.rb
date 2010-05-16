@@ -12,7 +12,8 @@ class Map < ActiveRecord::Base
   cattr_reader :per_page
   @@per_page = 100
   
-  has_attached_file :image, :styles => { :thumb => "100x100>",
+  has_attached_file :image, :path => ":rails_root/public/system/:class_:attachment/:id_:style.:extension",
+                            :styles => { :thumb => "100x100>",
                                          :medium => "350x350>" }
   
   def overhead_link
