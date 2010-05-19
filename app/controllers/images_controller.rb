@@ -12,6 +12,7 @@ class ImagesController < ApplicationController
     @image.user = current_user
     if @image.save
       flash[:upload] = "<div class='success rounded_4'>Imagem carregada com sucesso!</div><br/>"
+      Event.create :kind => "create_image", :image => @image, :user => current_user
       redirect_to images_path
     else
       flash[:upload] = "<div class='error rounded_4'>Ocorreu um erro ao efetuar o upload!</div><br/>"

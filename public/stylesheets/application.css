@@ -151,6 +151,17 @@ h3.submenu a.selected { color:#ffffff }
 
 
 /* ================================== */
+/* =             Events             = */
+/* ================================== */
+.events { vertical-align:top; padding-right:25px }
+  .events .event { /*background-color:#222222; */ padding:25px; margin:4px; border-bottom:solid 1px #333333; line-height:1.6em }
+  .events div:last-child { border:0 }
+  .events .event .time { float:right }
+  .events h2 { font-size:18px }
+  .events .event .announcement { color:#EEC400 }
+
+
+/* ================================== */
 /* =             Login              = */
 /* ================================== */
 .login { background-color:#333333 }
@@ -163,8 +174,15 @@ h3.submenu a.selected { color:#ffffff }
 /* ================================== */
 /* =           Sidebar              = */
 /* ================================== */
-.sidebar { float:right; width:270px }
+.sidebar { width:270px; vertical-align:top }
   .sidebar h2 { text-align:center; font-size:18px }
+  
+/* ================================== */
+/* =             Shouts             = */
+/* ================================== */
+.index-shouts { margin:auto; width:270px }
+.sidebar .shout textarea { width:100%; height:60px; background-color:#222222; border:solid 1px #333333; color:#ffffff}
+.sidebar .shout .user { font-weight:bold }
 
 
 /* ================================== */
@@ -191,13 +209,6 @@ h3.submenu a.selected { color:#ffffff }
                       border-top-right-radius: 15px; }
   .bar { width:240px; right:35px; color:#dddddd; padding:10px 0px; z-index:11 }
   
-
-/* ================================== */
-/* =             Shouts             = */
-/* ================================== */
-.index-shouts { margin:auto; width:270px }
-.sidebar .shout textarea { width:100%; height:60px; background-color:#222222; border:solid 1px #333333; color:#ffffff}
-.sidebar .shout .user { font-weight:bold }
 
 
 /* ================================== */

@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :images
   map.resource :user_session
   map.resources :users
+  map.resources :comments
   map.namespace :admin do |admin|
     admin.resources :users
   end
