@@ -38,7 +38,7 @@
             <span class='title'><%= link_to demo.title, demo.data.url %></span><br/>
             <span class='hint'><%= demo.description %></span>
           </td>
-          <td class='size'><%= demo.data_file_size %> kb</td>
+          <td class='size'><%= (demo.data_file_size || 0) / 1000 %> kb</td>
           <td class='user'>
             <%= link_to demo.user.name, user_path(demo.user) %>
           </td>
