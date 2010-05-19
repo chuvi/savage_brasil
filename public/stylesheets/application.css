@@ -154,11 +154,11 @@ h3.submenu a.selected { color:#ffffff }
 /* =             Events             = */
 /* ================================== */
 .events { vertical-align:top; padding-right:25px }
-  .events .event { /*background-color:#222222; */ padding:25px; margin:4px; border-bottom:solid 1px #333333; line-height:1.6em }
+  .events .event { /*background-color:#222222; */ padding:25px; margin:4px; border-bottom:solid 1px #202020; line-height:2.0em }
   .events div:last-child { border:0 }
   .events .event .time { float:right }
   .events h2 { font-size:18px }
-  .events .event .announcement { color:#EEC400 }
+  .events .event .announcement { color:#ffffff; font-size:14px }
 
 
 /* ================================== */
