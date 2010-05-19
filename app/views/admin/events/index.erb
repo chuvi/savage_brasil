@@ -1,0 +1,8 @@
+<%= link_to "Novo anúncio", new_admin_event_path %>
+
+<% for event in @events %>
+  <p>
+    <span class="hint"><%= event.id %></span> <%= event.message %>
+    <small><%= link_to "(editar)", edit_admin_event_path(event) %></small>
+  </p>
+<% end %>

@@ -1,8 +1,8 @@
 <%= link_to "Retornar", admin_events_path %>
 
-<h3>Adicionar anúncio</h3>
+<h3>Editar anúncio</h3>
 <% form_for [:admin, @event] do |f| %>
   <%= f.label :message, "Mensagem" %><br/>
   <%= f.text_area :message %>
-  <p><%= f.submit "Anunciar" %></p>
+  <p><%= f.submit "Atualizar" %></p>
 <% end %>

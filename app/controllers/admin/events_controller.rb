@@ -1,7 +1,7 @@
 class Admin::EventsController < ApplicationController
 
   def index
-    @events = Event.find_by_kind("announcement")
+    @events = Event.find_all_by_kind("announcement")
   end
   
   def new
@@ -13,6 +13,19 @@ class Admin::EventsController < ApplicationController
     @event.kind = "announcement"
     if @event.save
       flash[:notice] = "Evento criado com sucesso!"
+      redirect_to root_path
+    end
+  end
+  
+  def edit
+    @event = Event.find(params[:id])
+  end
+  
+  def update
+    @event = Event.find(params[:id])
+    @event.attributes = params[:event]
+    if @event.save
+      flash[:notice] = "Evento autalizado com sucesso!"
       redirect_to root_path
     end
   end
