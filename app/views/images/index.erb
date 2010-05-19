@@ -28,9 +28,8 @@
 
   <% for image in @images %>
     <span class="image-box">
-      <p><span class='hint'>Postado por </span><%= link_to image.user.name, user_path(image.user) %></p>
-      <p><%= link_to image_tag(image.image.url(:thumb)), image.image.url, :class => "image-link" %></p>
-      <p><%= image.description %></p>
+      <p style="text-align:center"><%= link_to image_tag(image.image.url(:thumb)), image.image.url, :class => "image-link" %></p>
+      <p style="text-align:center"><b><%= link_to image.user.name, user_path(image.user) %></b> <%= image.description %></p>
     </span>
   <% end %>
 </div>

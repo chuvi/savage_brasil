@@ -154,7 +154,7 @@ h3.submenu a.selected { color:#ffffff }
 /* =             Events             = */
 /* ================================== */
 .events { vertical-align:top; padding-right:25px }
-  .events .event { /*background-color:#222222; */ padding:25px; margin:4px; border-bottom:solid 1px #202020; line-height:2.0em }
+  .events .event { /*background-color:#222222; */ padding:20px; margin:4px; border-bottom:solid 1px #222222; line-height:2.0em }
   .events div:last-child { border:0 }
   .events .event .time { float:right }
   .events h2 { font-size:18px }
@@ -229,7 +229,8 @@ h3.submenu a.selected { color:#ffffff }
 .uid-explanation { width:300px; float:right; line-height:1.8em }
 .uid-explanation p { padding-bottom:15px }
 .uid-explanation strong { color:#ffffff }
-.show-user { width:300px; margin:auto }
+.show-user { width:350px; margin:auto }
+.show-user h3.name { font-size:24px; text-shadow: 0px 1px 2px #000000 }
 
 /* ================================== */
 /* =        Static Content          = */
@@ -254,8 +255,8 @@ h3.submenu a.selected { color:#ffffff }
 .asset-upload input[type=text], .asset-upload textarea { background-color:#303030; border:solid 1px #444444; color:#ffffff; }
 .asset-upload textarea { height:40px; padding:3px; overflow:auto; width:100% }
 
-.index-assets .image-box { padding:20px; background-color:#1b1b1b; border:solid 1px #2e2e2e; padding:15px; float:left; width:190px}
-.index-assets a.image-link { padding:2px; float:left }
+.index-assets .image-box { padding:20px; background-color:#222222; margin:2px; padding:15px; float:left; width:210px; height:240px}
+.index-assets a.image-link { padding:2px; display:inline-block;  }
 .index-assets a.image-link:hover { padding:0; border:solid 2px #EEC400 }
 
 .index-demos .list { width:600px; background-color:#222222; border-collapse:collapse; float:left }
