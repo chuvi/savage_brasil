@@ -214,7 +214,7 @@ h3.submenu a.selected { color:#ffffff }
 /* ================================== */
 /* =              Maps              = */
 /* ================================== */
-.map { background-color:#333333; float:left; margin:5px; padding:10px}
+.map { background-color:#333333; float:left; margin:5px; padding:10px; height:120px}
 .map .name { text-align:center; padding-bottom:3px; font-size:12px }
 
 
