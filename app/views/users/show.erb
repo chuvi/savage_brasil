@@ -27,7 +27,7 @@
       <p class="hint" style="text-align:center">Não possui UID</p>
     <% end %>
     
-    <% if @user.demos.any? %>
+<!--     <% if @user.demos.any? %>
       <h3><%= @user.demos.count %> <%= @user.demos.many? ? "demos" : "demo" %></h3>
       <ul>
         <% for demo in @user.demos %>
@@ -44,7 +44,7 @@
         <% end %>
       </ul>
     <% end %>
-  
+   -->
     <p style="text-align:center">
       <% if current_user %>
         <%= mail_to @user.email %>
