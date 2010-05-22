@@ -38,6 +38,15 @@ namespace :map do
   
 end
 
+desc "Create tiny thumbnails from images"
+task :tiny => :environment do
+  for image in Image.all
+    image.image = File.new(image.image.path)
+    image.save!
+    puts "Create tiny thumbnail of image ##{image.id}"
+  end
+end
+
 private
 
   def fetch_map_names!

@@ -231,6 +231,9 @@ h3.submenu a.selected { color:#ffffff }
 .uid-explanation strong { color:#ffffff }
 .show-user { width:350px; margin:auto }
 .show-user h3.name { font-size:24px; text-shadow: 0px 1px 2px #000000 }
+.show-user .tiny-image { height:64px; width:64px; float:left; margin:3px; border:solid 1px #555555; }
+.show-user .tiny-image:hover { border:solid 2px #EEC400; padding:1px; margin:1px }
+  
 
 /* ================================== */
 /* =        Static Content          = */

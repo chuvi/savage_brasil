@@ -27,24 +27,25 @@
       <p class="hint" style="text-align:center">Não possui UID</p>
     <% end %>
     
-<!--     <% if @user.demos.any? %>
+     <% if @user.demos.any? %>
       <h3><%= @user.demos.count %> <%= @user.demos.many? ? "demos" : "demo" %></h3>
       <ul>
         <% for demo in @user.demos %>
           <li><%= link_to demo.title, demo_path(demo) %></li>
         <% end %>
       </ul>
+      <p style="margin-left:40px"><small><%= link_to "Ir à página de demos", demos_path %></small></p>
     <% end %>
   
     <% if @user.images.any? %>
-      <h3><%= @user.demos.count %> <%= @user.demos.many? ? "imagens" : "imagem" %></h3>
-      <ul>
+      <h3><%= @user.images.count %> <%= @user.images.many? ? "imagens" : "imagem" %></h3>
+      <div style="display:inline-block">
         <% for image in @user.images %>
-          <li><%= link_to image.description, image_path(image) %></li>
+          <div class="tiny-image"><%= link_to image_tag(image.image.url(:tiny)), image.image.url %></div>
         <% end %>
-      </ul>
+      </div>
     <% end %>
-   -->
+
     <p style="text-align:center">
       <% if current_user %>
         <%= mail_to @user.email %>

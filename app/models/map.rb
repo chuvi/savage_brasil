@@ -5,6 +5,7 @@ class Map < ActiveRecord::Base
 
   has_many :snapshots
   has_many :matches
+  has_many :comments, :as => :commentable
   
   validates_uniqueness_of :name
   validates_presence_of :name

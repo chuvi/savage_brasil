@@ -1,7 +1,11 @@
 class Image < Asset
   
+  has_many :comments, :as => :commentable
+
   has_attached_file :image, 
-                    :styles => { :thumb => "200x200>", :medium => "500x500>" },
+                    :styles => { :tiny => "64x64#",
+                                 :thumb => "200x200>", 
+                                 :medium => "500x500>" },
                     :default_url => "/images/missing_logo.png"
                     
   validates_attachment_presence :image
