@@ -4,7 +4,7 @@
   <h2><%= @image.description %></h2>
   <span class="with-serif smooth">Por </span>
   <b><%= link_to @image.user.name, user_path(@image.user) %></b>
-  <span class="with-serif smooth">- Clique para ampliar</span>
+  <span class="with-serif smooth">- Clique na imagem para ampliar</span>
   <p><%= link_to image_tag(@image.image.url(:medium)), @image.image.url %></p>
   
   <div class="comments">
