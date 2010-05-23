@@ -38,12 +38,12 @@ namespace :map do
   
 end
 
-desc "Create tiny thumbnails from images"
-task :tiny => :environment do
+desc "Recreate image thumbnails (all sizes)"
+task :images => :environment do
   for image in Image.all
     image.image = File.new(image.image.path)
     image.save!
-    puts "Create tiny thumbnail of image ##{image.id}"
+    puts "Created thumbnails of image ##{image.id}"
   end
 end
 
