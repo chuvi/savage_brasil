@@ -1,7 +1,8 @@
 class ImagesController < ApplicationController
   
+  before_filter lambda{ |c| c.send :menu, :images }
+  
   def index
-    @menu = :images
     @image = Image.new
     @images = Image.all
   end
@@ -12,7 +13,6 @@ class ImagesController < ApplicationController
   end
   
   def create
-    @menu = :images
     @image = Image.new(params[:image])
     @image.user = current_user
     if @image.save
