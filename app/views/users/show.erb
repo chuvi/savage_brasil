@@ -5,11 +5,11 @@
   <h3 class='name'><%= @user.name %></h3>
   <div class="dark-box">
 
-    <% if @user.last_login_at || @user.current_login_at %>
+    <% if @last_request_at %>
       <p style="text-align:center">
         <span>
-          Último login foi <%= I18n.l @user.last_login_at || @user.current_login_at %><br/>
-          (<%= distance_of_time_in_words_to_now(@user.last_login_at || @user.current_login_at) %> atrás)
+          Último acesso foi <%= I18n.l @last_request_at %><br/>
+          (<%= distance_of_time_in_words_to_now(@last_request_at) %> atrás)
         </span>
       </p>
     <% else %>
