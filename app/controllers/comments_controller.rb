@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     if @parent.save
       flash[:success] = "Comentário adicionado"
+      flash[:comment_created] = true
     else
       flash[:error] = "Não foi possível adicionar o comentário"
     end

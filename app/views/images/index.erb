@@ -30,7 +30,12 @@
   <% for image in @images %>
     <span class="image-box">
       <p style="text-align:center"><%= link_to image_tag(image.image.url(:thumb)), image_path(image), :class => "image-link" %></p>
-      <p style="text-align:center"><b><%= link_to image.user.name, user_path(image.user) %></b> <%= image.description %></p>
+      <p style="text-align:center">
+        <b><%= link_to image.user.name, user_path(image.user) %></b> <%= image.description %><br/>
+        <% if image.comments.any? %>
+          <span class="hint"><%= image.comments.count %> comentário<%= image.comments.many? ? "s" : "" %></span>
+        <% end %>
+      </p>
     </span>
   <% end %>
 </div>
