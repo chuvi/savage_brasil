@@ -1,0 +1,47 @@
+<%= flash_message %>
+
+<div class="show-image">
+  <h2><%= @image.description %></h2>
+  <%= link_to image_tag(@image.image.url(:medium)), @image.image.url %>
+  
+  <div class="comments">
+    <h3>Comentários</h3>
+    <% for comment in @image.comments %>
+      <p><%= link_to comment.user.name, user_path(comment.user) %> <%= comment.message %></p>
+    <% end %>
+    
+    <% if current_user %>
+      <div style="text-align:center"><%= link_to_function "Adicionar comentário", nil, :id => "add-comment-link" %></div>
+      <br/>
+      <div id="comment-box" style="display:none">
+        <% form_for @comment do |f| %>
+          <p><%= f.text_area :message %></p>
+          <%= f.hidden_field :commentable_type, :value => "image" %>
+          <%= hidden_field_tag :parent_id, @image.id %>
+          <div style="float:right"><%= f.submit "Comentar" %></div>
+          <%= link_to_function "Cancelar", nil, :id => "cancel-comment-link" %>
+        <% end %>
+      </div>
+    <% else %>
+      <span class="hint">Você precisa estar logado para comentar</span>
+    <% end %>
+  </div>
+
+</div>
+<a name='bottom'>&nbsp;</a>
+
+<script language="javascript">
+
+  $("#add-comment-link").click(function() {
+    $(this).hide();
+    $("#comment-box").show();
+    $("#comment-box textarea").focus();
+    window.location = "#bottom";
+  });
+  
+  $("#cancel-comment-link").click(function() {
+    $("#comment-box").hide();
+    $("#add-comment-link").show();
+  });
+
+</script>

@@ -6,6 +6,11 @@ class ImagesController < ApplicationController
     @images = Image.all
   end
   
+  def show
+    @image = Image.find(params[:id])
+    @comment = Comment.new
+  end
+  
   def create
     @menu = :images
     @image = Image.new(params[:image])

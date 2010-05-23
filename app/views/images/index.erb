@@ -2,6 +2,7 @@
 
   <%= render "assets/header" %>
   <%= flash[:upload] %>
+  <%= flash_message %>
 
   <% if current_user %>
     <div class="dark-box asset-upload rounded_4" style="display:none">
@@ -28,7 +29,7 @@
 
   <% for image in @images %>
     <span class="image-box">
-      <p style="text-align:center"><%= link_to image_tag(image.image.url(:thumb)), image.image.url, :class => "image-link" %></p>
+      <p style="text-align:center"><%= link_to image_tag(image.image.url(:thumb)), image_path(image), :class => "image-link" %></p>
       <p style="text-align:center"><b><%= link_to image.user.name, user_path(image.user) %></b> <%= image.description %></p>
     </span>
   <% end %>

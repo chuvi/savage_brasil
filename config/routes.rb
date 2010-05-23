@@ -8,7 +8,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :assets
   map.resources :demos
   map.resources :maps, :collection => { :thumbs => :get }
-  map.resources :images
+  map.resources :images do |image|
+    image.resources :comments
+  end
   map.resource :user_session
   map.resources :users
   map.resources :comments

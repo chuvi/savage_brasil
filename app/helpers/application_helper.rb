@@ -1,6 +1,15 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   
+  def flash_message
+    level = :info    if flash[:info]
+    level = :success if flash[:success]
+    level = :warning if flash[:warning]
+    level = :error   if flash[:error]
+    message = flash[level]
+    level = "<div class='#{level} rounded_4'>#{message}</div><br/>"
+  end
+  
   def format_event(event)
     user = "<b>#{link_to event.user.name, user_path(event.user)}</b>" unless event.kind == "announcement"
     case event.kind
