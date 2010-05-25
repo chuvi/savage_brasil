@@ -6,6 +6,7 @@ class Map < ActiveRecord::Base
   has_many :snapshots
   has_many :matches
   has_many :comments, :as => :commentable
+  has_many :ratings, :as => :rateable
   
   validates_uniqueness_of :name
   validates_presence_of :name
@@ -25,5 +26,5 @@ class Map < ActiveRecord::Base
   def thumb_link
     "#{THUMBS_URL}#{name}_thumb.jpg"
   end
-
+  
 end

@@ -14,6 +14,7 @@ class MapsController < ApplicationController
     @menu = :map_list
     @map = Map.find(params[:id])
     @comment = Comment.new
+    @rating = @map.ratings.find_by_user_id(current_user) || Rating.new
   end
   
 end

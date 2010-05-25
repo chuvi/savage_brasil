@@ -1,9 +1,34 @@
 <%= link_to "← retornar", back_path_or(maps_path) %>
 
+<div class="rating">
+  <%= "<div class='success rounded_4'>#{flash[:rating]}</div>" if flash[:rating] %>
+  <div class="votes">
+    <p><strong><%= @map.ratings.good.count %></strong> BOM</p>
+    <p><strong><%= @map.ratings.nothing.count %></strong> indiferente</p>
+    <p><strong><%= @map.ratings.bad.count %></strong> RUIM</p>
+  </div>
+  <% if current_user %>
+    <% if @rating.new_record? %>
+      <h2>Se você já jogou no mapa,<br/>o que achou?</h2>
+      <% form_for @rating do |f| %>
+        <%= hidden_field_tag :map_id, @map.id %>
+        <%= f.submit "Ruim" %>
+        <%= f.submit "Indiferente" %>
+        <%= f.submit "Bom" %>
+      <% end %>
+    <% else %>
+      <span class="hint">
+        Você já votou nesse mapa.<br/> 
+        Deseja <%= link_to "alterar", rating_path(@rating), :method => :delete %> seu voto?
+      </span>
+    <% end %>
+  <% end %>
+</div>
+
 <div class="show-image">
   <h2><%= @map.name %></h2>
-  <span class="with-serif smooth">- Clique na imagem para ampliar</span>
-  <p><%= link_to image_tag(@map.image.url(:medium)), @map.image.url %></p>
+  <span class="with-serif smooth">Clique na imagem para ampliar</span>
+  <div><%= link_to image_tag(@map.image.url(:medium)), @map.image.url %></div>
   
   <%= render "layouts/comments", :model => @map %>
 

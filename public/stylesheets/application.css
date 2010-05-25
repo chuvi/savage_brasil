@@ -271,7 +271,7 @@ h3.submenu a.selected { color:#ffffff }
 
 .new-asset-button { position:absolute; top:260px; right:20px }
 
-.show-image { width:800px; margin:auto; text-align:center }
+.show-image { width:700px; margin:auto; text-align:center }
 .show-image img { border:solid 8px #222222 }
 .show-image h2 { color:#ffffff; text-shadow: 0px 1px 2px #000000 }
 
@@ -281,5 +281,16 @@ h3.submenu a.selected { color:#ffffff }
 .show-image .comments { width:350px; text-align:left; margin:auto; margin-top:20px }
 .show-image .comments textarea { width:100%; height:100px; color:#ffffff; background-color:#202020; border:solid 1px #333333 }
 
+/* ================================== */
+/* =             Ratings            = */
+/* ================================== */
+.rating { float:right; margin-top:120px;   }
+.rating h2 { color:#000000; text-shadow: 0 1px 1px #404040; font-size:16px }
+.rating form { display:inline }
+.rating input[type=submit] { color:#3787c2; background-color:#191919; border:solid 1px #333333; padding:5px 8px;
+                             -webkit-border-radius:4px; -moz-border-radius:4px; -o-border-radius:4px; border-radius:4px; }
+.rating input[type=submit]:hover { color:#EEC400; cursor:pointer }
+.rating .votes { font-size:12px; margin-bottom:20px; font-weight:bold }
+.rating .votes strong { font-size:18px; color:#ffffff }
 
 
