@@ -1,0 +1,11 @@
+<%= link_to "← retornar", back_path_or(maps_path) %>
+
+<div class="show-image">
+  <h2><%= @map.name %></h2>
+  <span class="with-serif smooth">- Clique na imagem para ampliar</span>
+  <p><%= link_to image_tag(@map.image.url(:medium)), @map.image.url %></p>
+  
+  <%= render "layouts/comments", :model => @map %>
+
+</div>
+<a name='bottom'>&nbsp;</a>

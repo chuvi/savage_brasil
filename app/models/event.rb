@@ -4,6 +4,7 @@ class Event < ActiveRecord::Base
   belongs_to :image
   belongs_to :comment
   belongs_to :demo
+  belongs_to :map
   
   default_scope :order => "created_at DESC"
   

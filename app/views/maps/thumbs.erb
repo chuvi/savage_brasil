@@ -14,7 +14,7 @@
         <span class="with-serif smooth"><%= params[:page] ? i + (params[:page].to_i - 1) * 100 + 1 : i + 1%></span>
         <%= map.name %>
       </div>
-      <a href='<%= map.image.url %>'><img src='<%# map.thumb_link %><%= map.image.url(:thumb) %>'/></a>
+      <%= link_to image_tag(map.image.url(:thumb)), map_path(map) %>
     <% end %>
   <% end %>
 </div>

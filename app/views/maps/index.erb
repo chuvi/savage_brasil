@@ -9,7 +9,7 @@
 <table>
   <% @maps.each_with_index do |map, i| %>
     <tr>
-      <td><span class="with-serif smooth"><%= i + 1 %></span> <%= link_to map.name, map.image.url %></td>
+      <td><span class="with-serif smooth"><%= i + 1 %></span> <%= link_to map.name, map_path(map) %></td>
     </tr>
   <% end %>
 </table>

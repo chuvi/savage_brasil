@@ -23,9 +23,9 @@ module ApplicationHelper
       when "create_image_comment"
         "#{user} comentou a #{link_to 'imagem', image_path(event.image)} adicionada por #{event.image.user.name}"
       when "create_demo_comment"
-        "#{user} comentou a #{link_to 'imagem', image_path(event.image)} adicionada por #{event.image.user.name}"
+        "#{user} comentou o #{link_to 'demo', demo_path(event.demo)} adicionado por #{event.demo.user.name}"
       when "create_map_comment"
-        "#{user} comentou a #{link_to 'imagem', image_path(event.image)} adicionada por #{event.image.user.name}"
+        "#{user} comentou o mapa #{link_to event.map.name, map_path(event.map)}"
       when "create_user"
         "#{user} é o novo integrante do Savage Brasil!"
     end

@@ -10,4 +10,10 @@ class MapsController < ApplicationController
     @maps = Map.paginate :page => params[:page]
   end
   
+  def show
+    @menu = :map_list
+    @map = Map.find(params[:id])
+    @comment = Comment.new
+  end
+  
 end
