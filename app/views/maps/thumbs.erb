@@ -12,7 +12,14 @@
     <% div_for map do %>
       <div class="name">
         <span class="with-serif smooth"><%= params[:page] ? i + (params[:page].to_i - 1) * 100 + 1 : i + 1%></span>
-        <%= map.name %>
+        <%= map.name %><br/>
+        <small>
+          <% if map.comments.any? %>
+            <span class="hint"><small><%= map.comments.count %> comentário<%= map.comments.many? ? "s" : "" %></small></span>
+          <% else %>
+            <br/>
+          <% end %>
+        </small>
       </div>
       <%= link_to image_tag(map.image.url(:thumb)), map_path(map) %>
     <% end %>

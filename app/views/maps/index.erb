@@ -9,7 +9,13 @@
 <table>
   <% @maps.each_with_index do |map, i| %>
     <tr>
-      <td><span class="with-serif smooth"><%= i + 1 %></span> <%= link_to map.name, map_path(map) %></td>
+      <td>
+        <span class="with-serif smooth"><%= i + 1 %></span>
+        <%= link_to map.name, map_path(map) %>
+        <% if map.comments.any? %>
+          (<span class="hint"><%= map.comments.count %> comentário<%= map.comments.many? ? "s" : "" %>)</span>
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>
