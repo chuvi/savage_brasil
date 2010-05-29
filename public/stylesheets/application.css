@@ -263,7 +263,8 @@ h3.submenu a.selected { color:#ffffff }
 .index-assets a.image-link { padding:2px; display:inline-block;  }
 .index-assets a.image-link:hover { padding:0; border:solid 2px #EEC400 }
 
-.index-demos .list { width:600px; background-color:#222222; border-collapse:collapse; float:left }
+.index-demos {  }
+.index-demos .list { width:600px; background-color:#222222; border-collapse:collapse; margin:auto }
 .index-demos .list td { vertical-align:top; padding-bottom:20px; border:solid 1px #333333; padding:10px }
 .index-demos .list span.title { font-size:16px; color:#ffffff }
 .index-demos .list td.size { white-space:nowrap }
