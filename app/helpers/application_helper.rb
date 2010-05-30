@@ -9,7 +9,7 @@ module ApplicationHelper
     level = :warning if flash[:warning]
     level = :error   if flash[:error]
     message = flash[level]
-    level = "<div class='#{level} rounded_4'>#{message}</div><br/>"
+    "<div class='#{level} rounded_4'>#{message}</div><br/>" if flash[level]
   end
   
   def format_event(event)
@@ -35,12 +35,12 @@ module ApplicationHelper
   
   def colorize(text)
     text.gsub(/(\^\d\d\d)/){"<span style='color:##{$1[1..-1]}'>"}.
+      gsub(/(\^clan \d+?)\^/){"<img class='icon' src='#{CLAN_SERVER}/#{$1[6..-1]}.png'/>"}.
       gsub(/(\^w)/){"<span style='color:#ffffff'>"}.
       gsub(/(\^r)/){"<span style='color:#ff0000'>"}.
       gsub(/(\^g)/){"<span style='color:#00ff00'>"}.
       gsub(/(\^b)/){"<span style='color:#0000ff'>"}.
-      gsub(/(\^y)/){"<span style='color:#ffff00'>"}.
-      gsub(/(\^clan \d+)\^/){"<img class='icon' src='#{CLAN_SERVER}/#{$1[6..-1]}.png'/>"}
+      gsub(/(\^y)/){"<span style='color:#ffff00'>"}
   end
   
   def format_chat(text)

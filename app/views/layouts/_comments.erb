@@ -1,6 +1,6 @@
 <div class="comments">
   <% if model.comments.any? %>
-    <h3>Comentários</h3>
+    <h2 style="font-size:16px">Comentários</h2>
     <% for comment in model.comments %>
       <p><%= link_to comment.user.name, user_path(comment.user) %> <%= comment.message %></p>
     <% end %>

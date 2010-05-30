@@ -2,7 +2,7 @@
 
 <div class="show-image" style="width:100%">
 
-  <h2><%= @demo.title %></h2>
+  <h1><%= @demo.title %></h1>
   <p style="margin-top:-15px">
     <span class="with-serif smooth">Por </span>
     <b><%= link_to @demo.user.name, user_path(@demo.user) %></b>
@@ -11,21 +11,23 @@
   <br/>
 
   <div class="chat">
-    <h3>Chat</h3>
+    <h2 style="font-size:16px; padding-right:110px">Chat</h2>
     <% for chat in @demo.chats %>
       <p><%= format_chat(colorize(chat)) %></p>
     <% end %>
     <br/>
   </div>
 
-  <div style="display:inline-block; width:450px">
-    <div style="float:left">
-      <%= link_to image_tag(@demo.map.image.url(:thumb), :class => "nice-border"), map_path(@demo.map) %><br/>
-      <span class="smooth"><%= @demo.map.name %></span>
+  <div style="width:450px">
+    <div class="rounded_4" style="display:inline-block; background-color:#333333; padding:20px">
+      <div style="float:left">
+        <%= link_to image_tag(@demo.map.image.url(:thumb), :class => "nice-border"), map_path(@demo.map) %><br/>
+        <span class="smooth"><%= @demo.map.name %></span>
+      </div>
+      <h3><%= colorize @demo.server_name %></h3>
+      <p style="margin-left:130px; text-align:left"><%= @demo.description %></p>
+      <p><b><%= link_to "Download", @demo.data.url %></b></p>
     </div>
-    <h3><%= colorize @demo.server_name %></h3>
-    <p style="margin-left:130px; text-align:left"><%= @demo.description %></p>
-    <br/>
     <br/>
 
     <a name='comment'>&nbsp;</a>
