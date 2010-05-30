@@ -45,7 +45,7 @@
       <% for demo in @demos %>
         <tr>
           <td>
-            <span class='title'><%= link_to demo.title, demo.data.url %></span><br/>
+            <span class='title'><%= link_to demo.title, demo_path(demo) %></span><br/>
             <span class='hint'><%= demo.description %></span>
           </td>
           <td class='size'><%= (demo.data_file_size || 0) / 1000 %> kb</td>

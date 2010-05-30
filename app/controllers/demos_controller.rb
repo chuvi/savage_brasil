@@ -6,6 +6,13 @@ class DemosController < ApplicationController
     @demos = Demo.all
   end
   
+  def show
+    @menu = :demos
+    @demo = Demo.find(params[:id])
+    @comment = Comment.new
+    @comments = @demo.comments
+  end
+  
   def create
     @menu = :demos
     @demo = Demo.new(params[:demo])

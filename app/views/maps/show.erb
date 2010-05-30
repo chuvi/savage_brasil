@@ -28,9 +28,9 @@
 <div class="show-image">
   <h2><%= @map.name %></h2>
   <span class="with-serif smooth">Clique na imagem para ampliar</span>
-  <div><%= link_to image_tag(@map.image.url(:medium)), @map.image.url %></div>
+  <div><%= link_to image_tag(@map.image.url(:medium), :class => "nice-border"), @map.image.url %></div>
   
   <%= render "layouts/comments", :model => @map %>
 
 </div>
-<a name='bottom'>&nbsp;</a>
+<a name='comment'>&nbsp;</a>

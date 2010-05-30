@@ -12,6 +12,7 @@
 
   <% if current_user %>
     <div style="text-align:center"><%= link_to_function "Adicionar comentário", nil, :id => "add-comment-link" %></div>
+    <a name='bottom'>&nbsp;</a>
     <div id="comment-box" style="display:none">
       <% form_for @comment do |f| %>
         <p><%= f.text_area :message %></p>
@@ -29,7 +30,7 @@
 <script language="javascript">
 
   <% if flash[:comment_created] %>
-    $(function() { window.location = "#bottom"; });
+    $(function() { window.location = "#comment"; });
   <% end %>
 
   $("#add-comment-link").click(function() {

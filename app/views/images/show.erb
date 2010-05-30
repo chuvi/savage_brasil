@@ -5,9 +5,9 @@
   <span class="with-serif smooth">Por </span>
   <b><%= link_to @image.user.name, user_path(@image.user) %></b>
   <span class="with-serif smooth">- Clique na imagem para ampliar</span>
-  <p><%= link_to image_tag(@image.image.url(:medium)), @image.image.url %></p>
+  <p><%= link_to image_tag(@image.image.url(:medium), :class => "nice-border"), @image.image.url %></p>
   
   <%= render "layouts/comments", :model => @image %>
 
 </div>
-<a name='bottom'>&nbsp;</a>
+<a name='comment'>&nbsp;</a>

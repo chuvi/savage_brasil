@@ -94,8 +94,6 @@ h3.submenu a.selected { color:#ffffff }
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;  }
   
-    }
-
 /* ================================== */
 /* =         Pretty Elements        = */
 /* ================================== */
@@ -263,18 +261,12 @@ h3.submenu a.selected { color:#ffffff }
 .index-assets a.image-link { padding:2px; display:inline-block;  }
 .index-assets a.image-link:hover { padding:0; border:solid 2px #EEC400 }
 
-.index-demos {  }
-.index-demos .list { width:600px; background-color:#222222; border-collapse:collapse; margin:auto }
-.index-demos .list td { vertical-align:top; padding-bottom:20px; border:solid 1px #333333; padding:10px }
-.index-demos .list span.title { font-size:16px; color:#ffffff }
-.index-demos .list td.size { white-space:nowrap }
-.index-demos .list td.user { white-space:nowrap }
-
 .new-asset-button { position:absolute; top:260px; right:20px }
 
 .show-image { width:470px; margin:auto; text-align:center }
-.show-image img { border:solid 8px #222222 }
+.show-image img.nice-border { border:solid 8px #222222 }
 .show-image h2 { color:#ffffff; text-shadow: 0px 1px 2px #000000 }
+.show-image h3 { text-align:left; margin:0 0 0 130px }
 
 /* ================================== */
 /* =            Comments            = */
@@ -294,4 +286,21 @@ h3.submenu a.selected { color:#ffffff }
 .rating .votes { font-size:12px; margin-bottom:20px; font-weight:bold }
 .rating .votes strong { font-size:18px; color:#ffffff }
 
+
+/* ================================== */
+/* =              Demos             = */
+/* ================================== */
+
+.index-demos {  }
+.index-demos .list { width:600px; background-color:#222222; border-collapse:collapse; margin:auto }
+.index-demos .list td { vertical-align:top; padding-bottom:20px; border:solid 1px #333333; padding:10px }
+.index-demos .list span.title { font-size:16px; color:#ffffff }
+.index-demos .list td.size { white-space:nowrap }
+.index-demos .list td.user { white-space:nowrap }
+
+.chat { float:right; width:400px; color:#ffffff; font-size:11px; text-align:left }
+.chat p { min-height:1.4em; margin:0.4em }
+.chat strong { color:#aaaaaa; padding-right:10px; font-weight:normal }
+.icon { width:15px; height:15px }
+.team { color:#5555aa; font-size:10px }
 
