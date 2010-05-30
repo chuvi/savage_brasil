@@ -12,7 +12,6 @@
 
   <% if current_user %>
     <div style="text-align:center"><%= link_to_function "Adicionar comentário", nil, :id => "add-comment-link" %></div>
-    <a name='bottom'>&nbsp;</a>
     <div id="comment-box" style="display:none">
       <% form_for @comment do |f| %>
         <p><%= f.text_area :message %></p>
@@ -38,7 +37,7 @@
     $(".success").hide();
     $("#comment-box").show();
     $("#comment-box textarea").focus();
-    window.location = "#bottom";
+    window.location = "#comment";
   });
   
   $("#cancel-comment-link").click(function() {
