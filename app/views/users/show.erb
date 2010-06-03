@@ -3,7 +3,7 @@
 <div class="show-user">
 
   <h3 class='name'><%= @user.name %></h3>
-  <div class="dark-box">
+  <div class="dark-box rounded_4">
 
     <% if @user.last_request_at %>
       <p style="text-align:center">
@@ -31,10 +31,9 @@
       <h3><%= @user.demos.count %> <%= @user.demos.many? ? "demos" : "demo" %></h3>
       <ul>
         <% for demo in @user.demos %>
-          <li><%# link_to demo.title, demo_path(demo) %><%= demo.title %></li>
+          <li><%= link_to demo.title, demo_path(demo) %></li>
         <% end %>
       </ul>
-      <p style="margin-left:40px"><small><%= link_to "Ir à página de demos", demos_path %></small></p>
     <% end %>
   
     <% if @user.images.any? %>
