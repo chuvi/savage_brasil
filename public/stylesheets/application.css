@@ -152,9 +152,9 @@ h3.submenu a.selected { color:#ffffff }
 /* =             Events             = */
 /* ================================== */
 .events { vertical-align:top; padding-right:25px; color:#999999 }
-  .events .event { /*background-color:#222222; */ padding:10px; margin:4px; border-bottom:solid 1px #222222; line-height:2.0em }
+  .events .event { /*background-color:#222222; */ padding:10px; margin:4px 0 0 0; border-bottom:solid 1px #222222; }
   .events div:last-child { border:0 }
-  .events .event .time { float:right }
+  .events .event .time { margin:0}
   .events h2 { font-size:18px }
   .events .event .announcement { color:#ffffff; font-size:14px }
 
@@ -191,8 +191,8 @@ h3.submenu a.selected { color:#ffffff }
   .banner h1 a { color:#eec400; font-weight:normal; text-shadow: 0 1px 3px #404040;}
   .banner h1 a .brasil { font-weight:bold; color:#ffffff }
 
-  .banner .menu { position:absolute; top:40px; right:20px; font-size:14px; text-transform:uppercase }
-    .banner .menu a { padding:10px 10px; color:#ffffff; font-weight:bold; text-shadow: 1px 1px 2px #000000;  }
+  .banner .menu { position:absolute; top:40px; right:20px; font-size:13px; text-transform:uppercase }
+    .banner .menu a { padding:10px 10px; color:#ffffff; font-weight:bold; text-shadow: 1px 1px 3px #000000;  }
 /*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
     .banner .menu a.selected { color:#eec400 }
     

@@ -4,12 +4,13 @@
       <h2>Atividade</h2>
       <% for event in @events %>
         <div class="event">
-          <span class="time with-serif smooth">
+          <%= format_event(event) %><br/>
+          <div class="time with-serif smooth">
             <%= distance_of_time_in_words_to_now(event.created_at) %> atrás
-          </span>
-          <%= format_event(event) %>
+          </div>
         </div>
       <% end %>
+      <p class="with-serif smooth" style="text-align:center">Apresentados os últimos 10 eventos</p>
     </td>
     <td class="sidebar">
       <%= flash[:login] %>

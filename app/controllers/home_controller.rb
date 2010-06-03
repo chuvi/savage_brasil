@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     @shout = Shout.new
     @shouts = Shout.all :limit => 5, :order => "created_at DESC"
     @user_session = UserSession.new
-    @events = Event.all
+    @events = Event.all :limit => 10
   end
   
 end
