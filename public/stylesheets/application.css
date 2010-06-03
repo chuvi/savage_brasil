@@ -253,7 +253,7 @@ h3.submenu a.selected { color:#ffffff }
 /* ================================== */
 /* =            Assets              = */
 /* ================================== */
-.asset-upload { margin:0 0 20px 20px; color:#ffffff; float:right; width:310px }
+.asset-upload { color:#ffffff; width:310px; margin:20px auto }
 .asset-upload input[type=text], .asset-upload textarea { background-color:#303030; border:solid 1px #444444; color:#ffffff; }
 .asset-upload textarea { height:40px; padding:3px; overflow:auto; width:100% }
 
@@ -263,7 +263,7 @@ h3.submenu a.selected { color:#ffffff }
 
 .new-asset-button { position:absolute; top:260px; right:20px }
 
-.show-image { width:470px; margin:auto; text-align:center }
+.show-image { width:520px; margin:auto; text-align:center }
 .show-image img.nice-border { border:solid 8px #222222 }
 .show-image h1 { color:#ffffff; text-shadow: 0px 1px 2px #000000 }
 .show-image h3 { text-align:left; margin:0 0 0 130px }
@@ -291,12 +291,13 @@ h3.submenu a.selected { color:#ffffff }
 /* =              Demos             = */
 /* ================================== */
 
-.index-demos {  }
-.index-demos .list { width:600px; background-color:#222222; border-collapse:collapse; margin:auto }
-.index-demos .list td { vertical-align:top; padding-bottom:20px; border:solid 1px #333333; padding:10px }
-.index-demos .list span.title { font-size:16px; color:#ffffff }
-.index-demos .list td.size { white-space:nowrap }
-.index-demos .list td.user { white-space:nowrap }
+.demo { width:600px; background-color:#222222; border-collapse:collapse; margin:auto; margin-bottom:5px; text-align:left }
+.demo p { margin:0.4em }
+.demo td { vertical-align:top; padding-bottom:20px; border:0; padding:10px }
+.demo span.title { font-size:16px; color:#ffffff }
+
+.show-image .columns { text-align:left; width:600px; margin:auto }
+.show-image .columns td { vertical-align:top }
 
 .chat { float:right; width:400px; color:#ffffff; font-size:11px; text-align:left }
 .chat p { min-height:1.4em; margin:0.4em }

@@ -1,7 +1,7 @@
 <%= link_to "← retornar", back_path_or(images_path) %>
 
 <div class="show-image">
-  <h2><%= @image.description %></h2>
+  <h1><%= @image.description %></h1>
   <span class="with-serif smooth">Por </span>
   <b><%= link_to @image.user.name, user_path(@image.user) %></b>
   <span class="with-serif smooth">- Clique na imagem para ampliar</span>
@@ -11,3 +11,4 @@
 
 </div>
 <a name='comment'>&nbsp;</a>
+

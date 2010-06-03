@@ -8,33 +8,24 @@
     <b><%= link_to @demo.user.name, user_path(@demo.user) %></b>
   </p>
   <br/>
+  <%= render @demo, :download => true %>
   <br/>
-
-  <div class="chat">
-    <h2 style="font-size:16px; padding-right:110px">Chat</h2>
-    <% for chat in @demo.chats %>
-      <p><%= format_chat(colorize(chat)) %></p>
-    <% end %>
-    <br/>
-  </div>
-
-  <div style="width:450px">
-    <div class="rounded_4" style="display:inline-block; background-color:#333333; padding:20px">
-      <div style="float:left">
-        <%= link_to image_tag(@demo.map.image.url(:thumb), :class => "nice-border"), map_path(@demo.map) %><br/>
-        <span class="smooth"><%= @demo.map.name %></span>
-      </div>
-      <h3><%= colorize @demo.server_name %></h3>
-      <p style="margin-left:130px; text-align:left"><%= @demo.description %></p>
-      <p><b><%= link_to "Download", @demo.data.url %></b></p>
-    </div>
-    <br/>
-
-    <a name='comment'>&nbsp;</a>
-    <%= render "layouts/comments", :model => @demo %>
-    
-  </div>
-
+  
+  <table class="columns">
+    <tr>
+      <td>
+        <a name='comment'>&nbsp;</a>
+        <%= render "layouts/comments", :model => @demo %>
+      </td>
+      <td style="padding-left:10px">
+        <h2 style="font-size:16px; margin-top:30px">Chat</h2>
+        <% for chat in @demo.chats %>
+          <p><%= format_chat(colorize(chat)) %></p>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+  
 </div>
 
 <!-- <h3>Detalhes</h3>
