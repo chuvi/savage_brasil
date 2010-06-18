@@ -3,7 +3,7 @@ class DemosController < ApplicationController
   def index
     @menu = :demos
     @demo = Demo.new
-    @demos = Demo.all
+    @demos = Demo.all :order => "created_at DESC"
   end
   
   def show
