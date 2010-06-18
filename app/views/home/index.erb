@@ -1,5 +1,16 @@
-<table style="width:100%">
+<table style="width:100%; margin:auto">
   <tr>
+    <td class="left-sidebar">
+      <%= flash[:login] %>
+      <% if current_user.nil? %>
+        <div class="sign-up rounded_4">
+          <h2>Cadastre-se no<br/> <big>Savage Brasil!</big></h2>
+          <p style="text-align:center">
+            <%= link_to "Cadastrar", new_user_path, :id => "new-user-button", :class => "awesome large" %>
+          </p>
+        </div>
+      <% end %>
+    </td>
     <td class="events">
       <h2>Atividade</h2>
       <% for event in @events %>
@@ -12,18 +23,7 @@
       <% end %>
       <p class="with-serif smooth" style="text-align:center">Apresentados os últimos 10 eventos</p>
     </td>
-    <td class="sidebar">
-      <%= flash[:login] %>
-      <% if current_user.nil? %>
-        <div class="sign-up rounded_4">
-          <h2>Cadastre-se no<br/> <big>Savage Brasil!</big></h2>
-          <p style="text-align:center">
-            <%= link_to "Cadastrar", new_user_path, :id => "new-user-button", :class => "awesome large" %>
-          </p>
-        </div>
-      <% end %>
-
-      <h2>Mural</h2>
+    <td class="right-sidebar">
       <div class="box rounded_4 shout">
         <%= flash[:shout] %>
         <%= error_messages_for :shout, :message => nil, :header_message => nil %>
