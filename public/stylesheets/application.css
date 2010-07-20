@@ -197,6 +197,13 @@ h3.submenu a.selected { color:#ffffff }
     .banner .menu a { padding:10px 10px; color:#ffffff; font-weight:bold; text-shadow: 1px 1px 3px #000000;  }
 /*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
     .banner .menu a.selected { color:#eec400 }
+
+	 .banner .left_menu { position:absolute; top:75px; left:35px; font-size:13px; text-transform:uppercase }
+	    .banner .left_menu a { padding:10px 10px; color:#ffffff; font-weight:bold; text-shadow: 1px 1px 3px #000000;  }
+	/*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
+	    .banner .left_menu a.selected { color:#eec400 }
+
+
     
     .bar-background, .bar { position:absolute; right:20px; top:160px; height:30px; width:270px }
 /*  .bar { background-color:#000000; opacity:0.5; filter: alpha(opacity = 50); }*/
