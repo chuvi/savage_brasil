@@ -1,29 +1,49 @@
 <table style="width:100%; margin:auto">
   <tr>
-    <td class="left-sidebar">
-      <%= flash[:login] %>
+    <td class="left-sidebar">      
+			<div class="sign-up rounded_4">
+				<h2>Baixe o Jogo Aqui</h2>
+				 <%= link_to 'Download ', 'http://www.newerth.com/?id=downloads&op=displayDownloads&category=1', :class => "awesome" %>
+				
+			</div>
+			<br/>
+	
       <% if current_user.nil? %>
         <div class="sign-up rounded_4">
+	
           <h2>Cadastre-se no<br/> <big>Savage Brasil!</big></h2>
           <p style="text-align:center">
             <%= link_to "Cadastrar", new_user_path, :id => "new-user-button", :class => "awesome large" %>
           </p>
         </div>
       <% end %>
+	
+
+		      <h2>Atividade</h2>
+		      <% for event in @events %>
+		        <div class="event">
+		          <%= format_event(event) %><br/>
+		          <div class="time with-serif smooth">
+		            <%= distance_of_time_in_words_to_now(event.created_at) %> atrás
+		          </div>
+		        </div>
+		      <% end %>
+		      <p class="with-serif smooth" style="text-align:center">Apresentados os últimos 10 eventos</p>
+		
     </td>
+
     <td class="events">
-      <h2>Atividade</h2>
-      <% for event in @events %>
-        <div class="event">
-          <%= format_event(event) %><br/>
-          <div class="time with-serif smooth">
-            <%= distance_of_time_in_words_to_now(event.created_at) %> atrás
-          </div>
-        </div>
-      <% end %>
-      <p class="with-serif smooth" style="text-align:center">Apresentados os últimos 10 eventos</p>
-    </td>
+	<div align="center"><object type="application/x-shockwave-flash" width="520" height="316" data="http://www.youtube.com/v/v4MJOs_Zfw0"><param name="movie" value="http://www.youtube.com/v/v4MJOs_Zfw0"></param><param name="wmode" value="transparent"></param></object><!-- Credz BleachEatingFreaks.com -->
+		<span class='hint'>Saiba mais <a href='http://www.youtube.com/watch?v=v4MJOs_Zfw0&feature=player_embedded'>aqui</a></span>
+		
+		</div>
+	
+			
+	
+	</td>
+
     <td class="right-sidebar">
+	    <%= flash[:login] %>
       <div class="box rounded_4 shout">
         <%= flash[:shout] %>
         <%= error_messages_for :shout, :message => nil, :header_message => nil %>

@@ -25,10 +25,10 @@
           SAVAGE<span class='brasil'>BRASIL</span>
         <% end %>
       </h1>
-			<div class='left_menu'>
-        <%= link_to 'FÓRUM', 'http://savagebrasil.forumeiros.com' %>
-        <%= link_to 'DOWNLOAD', 'http://www.newerth.com/?id=downloads&op=displayDownloads&category=1' %>
-      
+			<div class='left_menu'>        
+       Comunidade brasileira do jogo Savage:The Battle for Newerth
+<br/>
+<%= link_to "Saiba mais...", about_path %>
 			</div>
       <div class="bar-background">
       </div>
@@ -45,6 +45,7 @@
       </div>
       <div class="menu">
         <%= link_to "Home", root_path, :class => @menu == :home ? "selected" : nil %>
+<%= link_to 'FÓRUM', 'http://savagebrasil.forumeiros.com' %>
         <%= link_to "Imagens", images_path, :class => @menu == :images ? "selected" : nil %>
         <%= link_to "Demos", demos_path, :class => @menu == :demos ? "selected" : nil %>
         <%= link_to "Mapas", maps_path, :class => (@menu == :map_list || @menu == :map_thumbs ) ? "selected" : nil %>

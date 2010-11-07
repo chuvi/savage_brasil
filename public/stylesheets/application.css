@@ -198,7 +198,7 @@ h3.submenu a.selected { color:#ffffff }
 /*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
     .banner .menu a.selected { color:#eec400 }
 
-	 .banner .left_menu { position:absolute; top:75px; left:35px; font-size:13px; text-transform:uppercase }
+	 .banner .left_menu { position:absolute; top:75px; left:35px; font-size:13px; }
 	    .banner .left_menu a { padding:10px 10px; color:#ffffff; font-weight:bold; text-shadow: 1px 1px 3px #000000;  }
 	/*    .banner .menu a:hover { color:#ffffff; text-decoration:none  }*/
 	    .banner .left_menu a.selected { color:#eec400 }
@@ -254,6 +254,13 @@ h3.submenu a.selected { color:#ffffff }
 .tutorials .externals h3 { margin-bottom:25px; padding:0; text-align:center }
 .tutorials .externals { float:right }
 .tutorials h3 { text-align:left; padding:0 0 0 60px; margin-bottom:0 }
+
+.about {}
+.about .text {font-size:12px; line-height:20px; width:700px;}
+
+
+.see_too { float:right}
+
 
 .sign-up { background-color:#007d9a; padding:15px; color:#222222; font-weight:bold; text-align:center }
   .sign-up h2 { font-size:18px; text-shadow:none; color:#ffffff  }

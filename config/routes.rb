@@ -4,6 +4,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :shouts
   map.tutorials "/tutoriais", :controller => :contents, :action => :tutorials
+  map.about "/about", :controller => :contents, :action => :about
+  map.rules "/rules", :controller => :contents, :action => :rules
   map.current_user "/config", :controller => :users, :action => :edit
   map.resources :assets
   map.resources :demos
