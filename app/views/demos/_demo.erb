@@ -1,6 +1,10 @@
 <table class="demo rounded_4">
   <tr>
-    <td><%= link_to image_tag(demo.map.image.url(:thumb), :class => "nice-border"), map_path(demo.map) %></td>
+    <td>
+      <% if demo.map %>
+        <%= link_to image_tag(demo.map.image.url(:thumb), :class => "nice-border"), map_path(demo.map) %>
+      <% end %>
+    </td>
     <td style="width:400px">
       <% if defined? title %>
         <span class='title'><%= link_to demo.title, demo_path(demo) %></span>
@@ -10,7 +14,7 @@
     <td style="width:200px">
       <p><span class='smooth'>Upload por: </span><b><%= link_to demo.user.name, user_path(demo.user) %></b></p>
       <p><span class='smooth'>Data: </span><%= I18n.l demo.created_at, :format => :day_only %></p>
-      <p><span class='smooth'>Mapa: </span><%= demo.map.name %></p>
+      <p><span class='smooth'>Mapa: </span><%= demo.map.try :name %></p>
       <p><span class='smooth'>Tamanho: </span><%= (demo.data_file_size || 0) / 1000 %> kb</p>
       <% if demo.comments.any? %>
         <p class="hint"><%= demo.comments.count %> comentários</p>
